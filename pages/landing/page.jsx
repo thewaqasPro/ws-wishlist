@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import Head from 'next/head';
+
 import {
   Heart, Menu, X, Lock, TrendingUp, CheckCircle2, Flame, Users,
   BarChart3, Paintbrush, ShoppingBag, RefreshCw, Lightbulb, Zap,
@@ -800,7 +802,11 @@ const Footer = () => {
 export default function App() {
   return (
     <div className="antialiased overflow-x-hidden min-h-screen">
+      <Head>
+        <script src="https://cdn.tailwindcss.com"></script>
+      </Head>
       <GlobalStyles />
+
       <Header />
       <main className="pt-20">
         <Hero />
