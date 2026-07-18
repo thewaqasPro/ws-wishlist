@@ -2,6 +2,8 @@ import MetricCard from "@/components/dashboard/MetricCard";
 import SetupCard from "@/components/dashboard/SetupCard";
 import useAuthenticatedFetch from "@/components/hooks/useAuthenticatedFetch";
 import isInitialLoad from "@/utils/middleware/isInitialLoad";
+import LandingPage from "./landing/page";
+
 import {
   BlockStack,
   Button,
@@ -124,7 +126,11 @@ function DashboardPage() {
           setup={data.setup}
           themeEditorUrl={data.themeEditorUrl}
           onConfirmEmbed={confirmEmbed}
-          onCustomize={() => router.push("/customize")}
+          onCustomize={() =>
+            router.push(
+              `/customize?shop=${router.query.shop || ""}&host=${router.query.host || ""}`
+            )
+          }
         />
         <InlineGrid columns={{ xs: 1, md: 2 }} gap="400">
           <Card>
@@ -135,7 +141,11 @@ function DashboardPage() {
                 </Text>
                 <Button
                   variant="plain"
-                  onClick={() => router.push("/wishlists")}
+                  onClick={() =>
+                    router.push(
+                      `/wishlists?shop=${router.query.shop || ""}&host=${router.query.host || ""}`
+                    )
+                  }
                 >
                   View all
                 </Button>
@@ -206,52 +216,5 @@ function DashboardPage() {
 }
 
 function InstallLandingPage() {
-  return (
-    <div className="ws-install-container">
-      <div className="ws-install-card">
-        <div className="ws-install-logo" aria-hidden="true">
-          ♥
-        </div>
-        <h1 className="ws-install-title">WS Wishlist for Shopify</h1>
-        <p className="ws-install-subtitle">
-          Installation must be started from the Shopify App Store or from the
-          app&apos;s approved listing inside Shopify Admin.
-        </p>
-        <a
-          className="ws-install-btn"
-          href="https://admin.shopify.com"
-          rel="noreferrer"
-        >
-          Open Shopify Admin
-        </a>
-        <div className="ws-install-highlights">
-          <div className="ws-install-highlight">
-            <span className="ws-install-highlight-check">✓</span>
-            <div>
-              <strong>Instant wishlist interactions</strong>
-              <p>
-                Shoppers see local-first updates while changes sync securely.
-              </p>
-            </div>
-          </div>
-          <div className="ws-install-highlight">
-            <span className="ws-install-highlight-check">✓</span>
-            <div>
-              <strong>Theme app extension</strong>
-              <p>
-                Add product hearts, a wishlist page, and a header icon block.
-              </p>
-            </div>
-          </div>
-          <div className="ws-install-highlight">
-            <span className="ws-install-highlight-check">✓</span>
-            <div>
-              <strong>Merchant analytics</strong>
-              <p>See wishlist usage and the ten most-saved products.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+  return <LandingPage />;
 }
