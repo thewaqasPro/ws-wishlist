@@ -1,0 +1,61 @@
+{
+  "name": "ws-wishlist",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A production-ready Shopify wishlist app with an embedded admin, theme app extension, app proxy API, PostgreSQL, and Docker deployment.",
+  "scripts": {
+    "dev": "next dev",
+    "dev:all": "node _developer/autoDev.js",
+    "build": "next build",
+    "start": "next start -p ${PORT:-3000}",
+    "start:docker": "node scripts/docker-start.js",
+    "-----> Prettier <-----": "",
+    "pretty": "prettier --write ./",
+    "lint:check": "prettier --check ./",
+    "-----> Prisma <-----": "",
+    "prisma": "prisma",
+    "prisma:generate": "prisma generate",
+    "prisma:push": "prisma db push",
+    "prisma:pull": "prisma db pull",
+    "-----> Reserved Scripts <-----": "",
+    "prepare": "prisma generate",
+    "-----> Shopify <-----": "",
+    "shopify": "shopify",
+    "shopify:deploy": "shopify app deploy",
+    "shopify:config": "shopify app config validate",
+    "deploy": "pnpm run update:config && shopify app deploy --allow-updates",
+    "update:config": "node _developer/tomlWriter.js",
+    "migrate": "node scripts/migrate.js",
+    "prisma:generate:offline": "PRISMA_SCHEMA_ENGINE_BINARY=./scripts/prisma-schema-engine-stub.sh prisma generate",
+    "verify": "npm run lint:check && npm run build && npm audit --omit=dev",
+    "verify:local": "node scripts/verify-release.js && node scripts/test-storefront-state.js && npm run lint:check && npm run build",
+    "test:storefront": "node scripts/test-storefront-state.js"
+  },
+  "dependencies": {
+    "@prisma/adapter-pg": "^7.8.0",
+    "@prisma/client": "^7.8.0",
+    "@shopify/polaris": "^13.9.5",
+    "@shopify/polaris-icons": "^9.3.1",
+    "@shopify/shopify-api": "^13.1.0",
+    "cryptr": "^6.4.0",
+    "dotenv": "^17.4.2",
+    "next": "16.2.10",
+    "next-api-middleware": "^3.0.0",
+    "pg": "^8.22.0",
+    "react": "19.2.7",
+    "react-dom": "19.2.7"
+  },
+  "devDependencies": {
+    "@iarna/toml": "^2.2.5",
+    "@shopify/cli": "^4.5.1",
+    "prettier": "^3.9.5",
+    "prisma": "^7.8.0"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "overrides": {
+    "postcss": "^8.5.10"
+  }
+}

@@ -1,0 +1,8 @@
+api_version = "2026-07"
+
+[[extensions]]
+name = "WS Wishlist Theme"
+description = "Wishlist hearts, product button, drawer, and wishlist page"
+handle = "ws-wishlist-theme"
+uid = "586b50dd-9f63-1e24-e3d4-22b31e427cb1390d7812"
+type = "theme"

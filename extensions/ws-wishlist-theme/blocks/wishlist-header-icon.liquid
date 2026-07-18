@@ -1,0 +1,48 @@
+<div
+  hidden
+  data-ws-wishlist-config
+  data-proxy-path="{{ block.settings.proxy_path | escape }}"
+  data-customer-id="{% if customer %}{{ customer.id }}{% endif %}"
+  data-page-type="{{ request.page_type | escape }}"
+  data-product-handle="{% if product %}{{ product.handle | escape }}{% endif %}"
+  data-variant-id="{% if product %}{{ product.selected_or_first_available_variant.id }}{% endif %}"
+></div>
+<a
+  href="{{ block.settings.proxy_path | escape }}"
+  class="ws-wishlist-header-link"
+  data-ws-wishlist-header-icon
+  data-ws-show-count="{{ block.settings.show_count }}"
+  aria-label="{{ block.settings.accessible_label | escape }}"
+></a>
+
+{% render 'ws-wishlist-assets' %}
+
+{% schema %}
+{
+  "name": "Wishlist header icon",
+  "target": "section",
+  "stylesheet": "ws-wishlist.css",
+  "enabled_on": { "groups": ["header"] },
+  "settings": [
+    {
+      "type": "text",
+      "id": "accessible_label",
+      "label": "Accessible label",
+      "default": "Open wishlist"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_count",
+      "label": "Show saved item count",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "proxy_path",
+      "label": "App proxy path",
+      "default": "/apps/page",
+      "info": "Change only if the app proxy URL was customized."
+    }
+  ]
+}
+{% endschema %}

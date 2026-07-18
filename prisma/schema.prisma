@@ -1,0 +1,148 @@
+generator client {
+  provider = "prisma-client"
+  output   = "client"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model stores {
+  shop        String           @id
+  isActive    Boolean          @default(false)
+  installedAt DateTime         @default(now())
+  updatedAt   DateTime         @updatedAt
+  settings    store_settings?
+  wishlists   wishlist[]
+  events      wishlist_event[]
+  syncOperations wishlist_sync_operation[]
+
+  @@index([shop])
+}
+
+model session {
+  id      String  @id
+  content String? @db.Text
+  shop    String?
+
+  @@index([id])
+  @@index([shop])
+}
+
+model store_settings {
+  id                     String    @id @default(cuid())
+  shop                   String    @unique
+  iconEnabled            Boolean   @default(true)
+  showOnCollectionPages  Boolean   @default(true)
+  showOnHomePage         Boolean   @default(true)
+  showOnProductImage     Boolean   @default(true)
+  autoInjectHeaderIcon   Boolean   @default(false)
+  heartColor             String    @default("#222222")
+  iconPositionX          Int       @default(100)
+  iconPositionY          Int       @default(0)
+  pageTitle              String    @default("My Wishlist")
+  emptyStateTitle        String    @default("Your wishlist is empty")
+  emptyStateBody         String    @default("Save products you love and come back to them anytime.")
+  floatingButtonEnabled  Boolean   @default(true)
+  floatingButtonText     String    @default("My Wishlist")
+  floatingButtonPosition String    @default("bottom-right")
+  addButtonEnabled       Boolean   @default(true)
+  addButtonText          String    @default("Add to wishlist")
+  removeButtonText       String    @default("Remove from wishlist")
+  showPrices             Boolean   @default(true)
+  showAddToCart          Boolean   @default(true)
+  requireLogin           Boolean   @default(false)
+  onlyInStock            Boolean   @default(false)
+  excludedTags           String    @default("")
+  customCss              String    @default("") @db.Text
+  setupEmbedConfirmed    Boolean   @default(false)
+  customizedAt           DateTime?
+  createdAt              DateTime  @default(now())
+  updatedAt              DateTime  @updatedAt
+  settingsProfileId      String?
+  store                  stores    @relation(fields: [shop], references: [shop], onDelete: Cascade)
+  settingsProfile        wishlist_settings_profile? @relation(fields: [settingsProfileId], references: [id], onDelete: SetNull)
+
+  @@index([settingsProfileId])
+}
+
+model wishlist {
+  id         String           @id @default(cuid())
+  shop       String
+  key        String
+  customerId String?
+  visitorId  String?
+  email      String?
+  name       String?
+  createdAt  DateTime         @default(now())
+  updatedAt  DateTime         @updatedAt
+  store      stores           @relation(fields: [shop], references: [shop], onDelete: Cascade)
+  items      wishlist_item[]
+  events     wishlist_event[]
+
+  @@unique([shop, key])
+  @@index([shop, updatedAt])
+  @@index([shop, customerId])
+  @@index([shop, visitorId])
+}
+
+model wishlist_item {
+  id            String   @id @default(cuid())
+  wishlistId    String
+  productId     String
+  variantId     String
+  productHandle String
+  title         String
+  variantTitle  String?
+  productUrl    String
+  imageUrl      String?
+  imageAlt      String?
+  price         Decimal  @db.Decimal(14, 2)
+  currency      String   @default("USD")
+  available     Boolean  @default(true)
+  addedAt       DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  wishlist      wishlist @relation(fields: [wishlistId], references: [id], onDelete: Cascade)
+
+  @@unique([wishlistId, variantId])
+  @@index([wishlistId, addedAt])
+  @@index([productId])
+}
+
+model wishlist_event {
+  id         String    @id @default(cuid())
+  shop       String
+  wishlistId String?
+  type       String
+  productId  String?
+  variantId  String?
+  value      Decimal?  @db.Decimal(14, 2)
+  createdAt  DateTime  @default(now())
+  store      stores    @relation(fields: [shop], references: [shop], onDelete: Cascade)
+  wishlist   wishlist? @relation(fields: [wishlistId], references: [id], onDelete: SetNull)
+
+  @@index([shop, createdAt])
+  @@index([shop, type, createdAt])
+}
+
+
+model wishlist_sync_operation {
+  id          String   @id @default(cuid())
+  shop        String
+  operationId String
+  action      String
+  createdAt   DateTime @default(now())
+  completedAt DateTime?
+  store       stores   @relation(fields: [shop], references: [shop], onDelete: Cascade)
+
+  @@unique([shop, operationId])
+  @@index([shop, createdAt])
+}
+
+model wishlist_settings_profile {
+  id          String           @id @default(cuid())
+  fingerprint String           @unique
+  settings    Json
+  createdAt   DateTime         @default(now())
+  assignments store_settings[]
+}

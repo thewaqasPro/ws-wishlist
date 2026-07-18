@@ -1,0 +1,961 @@
+:root {
+  --ws-border: #d9d9d9;
+  --ws-muted: #616161;
+}
+body {
+  background: #f1f1f1;
+}
+.ws-card-pad {
+  padding: 20px;
+}
+.ws-progress {
+  min-width: 280px;
+  flex: 1;
+}
+.ws-setup-step {
+  padding: 20px;
+}
+.ws-step-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  border: 2px dotted #8a8a8a;
+  border-radius: 50%;
+  font-weight: 700;
+}
+.ws-step-icon--done {
+  border-style: solid;
+  border-color: #008060;
+  color: #008060;
+}
+.ws-tip {
+  background: #fafafa;
+}
+.ws-recent-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 0;
+  border-top: 1px solid #e5e5e5;
+}
+.ws-recent-row:first-of-type {
+  border-top: 0;
+}
+.ws-code-path {
+  padding: 12px 14px;
+  border: 1px solid #c9c9c9;
+  border-radius: 8px;
+  background: #f7f7f7;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  word-break: break-all;
+}
+.ws-error {
+  margin-bottom: 16px;
+  padding: 12px;
+  border-radius: 8px;
+  background: #fff4f4;
+}
+
+/* ─── Unsaved changes banner ────────────────────────────────── */
+.ws-unsaved-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 16px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  background: #fff8e1;
+  border: 1px solid #ffe082;
+  font-size: 13px;
+  font-weight: 500;
+  color: #5c4800;
+  animation: ws-slide-in 0.2s ease;
+}
+.ws-unsaved-save {
+  padding: 6px 14px;
+  border-radius: 6px;
+  border: 1px solid #5c4800;
+  background: #fff;
+  color: #5c4800;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background 0.15s ease,
+    color 0.15s ease;
+}
+.ws-unsaved-save:hover {
+  background: #5c4800;
+  color: #fff;
+}
+@keyframes ws-slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes ws-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-4px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ─── Customize layout ──────────────────────────────────────── */
+.ws-customize-layout {
+  display: grid;
+  grid-template-columns: minmax(320px, 410px) minmax(560px, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+.ws-customize-sidebar {
+  display: grid;
+  gap: 16px;
+}
+.ws-customize-preview {
+  position: sticky;
+  top: 16px;
+  display: grid;
+  gap: 12px;
+}
+
+/* ─── Section card trigger ──────────────────────────────────── */
+.ws-section-trigger {
+  width: 100%;
+  border: 0;
+  background: transparent;
+  padding: 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  cursor: pointer;
+  text-align: left;
+  color: inherit;
+  transition: background 0.15s ease;
+}
+.ws-section-trigger:hover {
+  background: rgba(0, 0, 0, 0.025);
+}
+.ws-section-trigger small {
+  display: block;
+  margin-top: 8px;
+  max-width: 320px;
+  color: #616161;
+  font-size: 14px;
+  line-height: 1.45;
+}
+/* Animated SVG chevron */
+.ws-section-chevron {
+  flex-shrink: 0;
+  margin-top: 2px;
+  display: flex;
+  align-items: center;
+  color: #888;
+  transition: transform 0.22s ease;
+}
+.ws-section-trigger--open .ws-section-chevron {
+  transform: rotate(180deg);
+}
+.ws-section-content {
+  padding: 0 20px 20px;
+  border-top: 1px solid #ededed;
+  padding-top: 18px;
+}
+
+/* ─── Color picker field ────────────────────────────────────── */
+.ws-color-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.ws-color-label {
+  font-size: 14px;
+  font-weight: 550;
+  color: #202223;
+}
+.ws-color-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.ws-color-swatch {
+  width: 40px;
+  height: 40px;
+  padding: 2px;
+  border: 1px solid #c9c9c9;
+  border-radius: 8px;
+  background: none;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.ws-color-swatch::-webkit-color-swatch-wrapper {
+  padding: 0;
+  border-radius: 6px;
+}
+.ws-color-swatch::-webkit-color-swatch {
+  border: none;
+  border-radius: 6px;
+}
+.ws-color-hex {
+  flex: 1;
+  padding: 8px 10px;
+  border: 1px solid #c9c9c9;
+  border-radius: 8px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 13px;
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+.ws-color-hex:focus {
+  border-color: #0070f3;
+  box-shadow: 0 0 0 2px rgba(0, 112, 243, 0.14);
+}
+.ws-color-preview-heart {
+  font-size: 26px;
+  line-height: 1;
+  transition: color 0.15s ease;
+  flex-shrink: 0;
+}
+.ws-color-help {
+  font-size: 12px;
+  color: #888;
+}
+
+/* ─── Preview tabs ──────────────────────────────────────────── */
+.ws-preview-tabs {
+  display: flex;
+  gap: 6px;
+  padding: 4px;
+  background: #f0f0f0;
+  border-radius: 10px;
+  width: fit-content;
+}
+.ws-preview-tab {
+  padding: 7px 16px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  font-size: 13px;
+  font-weight: 500;
+  color: #666;
+  cursor: pointer;
+  transition:
+    background 0.15s ease,
+    color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+.ws-preview-tab:hover {
+  background: rgba(255, 255, 255, 0.7);
+  color: #333;
+}
+.ws-preview-tab--active {
+  background: #fff;
+  color: #111;
+  font-weight: 600;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+}
+
+/* ─── Preview shell ─────────────────────────────────────────── */
+/* ─── Preview shell ─────────────────────────────────────────── */
+.ws-preview-shell {
+  border: 1px solid #d5d5d5;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #f9fafb;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+  transition: border-radius 0.3s ease;
+}
+.ws-preview-shell--fullwidth {
+  border-radius: 0;
+  border-left: 0;
+  border-right: 0;
+  margin: 0 -24px;
+}
+
+/* ─── Toolbar v2 ────────────────────────────────────────────── */
+.ws-preview-toolbar-v2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 16px;
+  background: #fff;
+  border-bottom: 1px solid #e5e7eb;
+  min-height: 52px;
+}
+
+/* Page type selector */
+.ws-pt-page-selector {
+  position: relative;
+}
+.ws-pt-page-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #fff;
+  color: #374151;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition:
+    background 0.15s ease,
+    border-color 0.15s ease;
+  white-space: nowrap;
+}
+.ws-pt-page-btn:hover {
+  background: #f9fafb;
+  border-color: #d1d5db;
+}
+.ws-pt-page-icon {
+  font-size: 14px;
+  line-height: 1;
+}
+.ws-pt-chevron {
+  display: flex;
+  align-items: center;
+  color: #9ca3af;
+  transition: transform 0.2s ease;
+}
+.ws-pt-chevron--open {
+  transform: rotate(180deg);
+}
+/* Dropdown */
+.ws-pt-dropdown {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  z-index: 50;
+  min-width: 170px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.12),
+    0 2px 6px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  animation: ws-fade-in 0.14s ease;
+}
+.ws-pt-dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 9px 14px;
+  border: none;
+  background: transparent;
+  color: #374151;
+  font-size: 13px;
+  font-weight: 500;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.12s ease;
+}
+.ws-pt-dropdown-item:hover {
+  background: #f9fafb;
+}
+.ws-pt-dropdown-item--active {
+  color: #6b7280;
+  line-height: 1.4;
+}
+
+/* ─── Install Landing Page ─────────────────────────────────── */
+.ws-install-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: radial-gradient(circle at top left, #fafbfb, #f3f4f6);
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  padding: 24px;
+}
+.ws-install-card {
+  width: 100%;
+  max-width: 480px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.04),
+    0 1px 3px rgba(0, 0, 0, 0.02);
+  padding: 40px;
+  text-align: center;
+  animation: ws-fade-in 0.3s ease;
+}
+.ws-install-logo {
+  display: inline-grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #111827;
+  color: #ffffff;
+  font-size: 28px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 12px rgba(17, 24, 39, 0.15);
+}
+.ws-install-title {
+  font-size: 26px;
+  font-weight: 750;
+  color: #111827;
+  letter-spacing: -0.02em;
+  margin: 0 0 8px;
+}
+.ws-install-subtitle {
+  font-size: 14px;
+  color: #6b7280;
+  line-height: 1.5;
+  margin: 0 0 32px;
+}
+.ws-install-form {
+  text-align: left;
+  margin-bottom: 32px;
+}
+.ws-install-input-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.ws-install-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #374151;
+}
+.ws-install-input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1.5px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #1f2937;
+  outline: none;
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+.ws-install-input:focus {
+  border-color: #111827;
+  box-shadow: 0 0 0 3px rgba(17, 24, 39, 0.08);
+}
+.ws-install-error {
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: #fef2f2;
+  border: 1.5px solid #fee2e2;
+  color: #ef4444;
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+.ws-install-btn {
+  width: 100%;
+  padding: 13px;
+  border: none;
+  border-radius: 8px;
+  background: #111827;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+}
+.ws-install-btn:hover:not([disabled]) {
+  opacity: 0.9;
+}
+.ws-install-btn:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+.ws-install-highlights {
+  border-top: 1px solid #f3f4f6;
+  padding-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: left;
+}
+.ws-install-highlight {
+  display: flex;
+  gap: 12px;
+  align-items: start;
+}
+.ws-install-highlight-check {
+  font-size: 16px;
+  font-weight: bold;
+  color: #059669;
+  line-height: 1.2;
+}
+.ws-install-highlight strong {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 2px;
+}
+.ws-install-highlight p {
+  margin: 0;
+  font-size: 12px;
+  color: #6b7280;
+  line-height: 1.4;
+}
+.ws-pt-check {
+  margin-left: auto;
+  color: #111827;
+  font-size: 12px;
+}
+
+/* Device selector */
+.ws-pt-device-group {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.ws-pt-device-pills {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 3px;
+  background: #f3f4f6;
+  border-radius: 8px;
+}
+.ws-pt-device-btn {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: #6b7280;
+  cursor: pointer;
+  transition:
+    background 0.15s ease,
+    color 0.15s ease;
+}
+.ws-pt-device-btn:hover {
+  background: rgba(255, 255, 255, 0.7);
+  color: #374151;
+}
+.ws-pt-device-btn--active {
+  background: #fff;
+  color: #111827;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+.ws-pt-device-sep {
+  width: 1px;
+  height: 20px;
+  background: #e5e7eb;
+  margin: 0 2px;
+}
+
+/* ─── Browser chrome bar ────────────────────────────────────── */
+.ws-preview-browser-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 8px 14px;
+  background: #f3f4f6;
+  border-bottom: 1px solid #e5e7eb;
+}
+.ws-preview-browser-dots {
+  display: flex;
+  gap: 5px;
+  flex-shrink: 0;
+}
+.ws-preview-browser-dots span {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #d1d5db;
+}
+.ws-preview-browser-dots span:nth-child(1) {
+  background: #f87171;
+}
+.ws-preview-browser-dots span:nth-child(2) {
+  background: #fbbf24;
+}
+.ws-preview-browser-dots span:nth-child(3) {
+  background: #34d399;
+}
+.ws-preview-browser-url {
+  flex: 1;
+  padding: 4px 10px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  font-size: 11px;
+  color: #6b7280;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+/* ─── Viewport wrapper ──────────────────────────────────────── */
+.ws-preview-viewport-wrap {
+  overflow-x: auto;
+  background: #f9fafb;
+  min-height: 580px;
+  padding: 24px;
+}
+.ws-store-preview-v2 {
+  position: relative;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  overflow: hidden;
+  min-height: 540px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* ─── Store nav header ──────────────────────────────────────── */
+.ws-store-header {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+  padding: 16px 24px;
+  border-bottom: 1px solid #eee;
+  color: #7a7a7a;
+  font-size: 13px;
+}
+.ws-store-header--mobile {
+  grid-template-columns: 1fr auto;
+}
+.ws-store-header span:last-child {
+  text-align: right;
+}
+
+.ws-preview-heading {
+  display: flex;
+  justify-content: space-between;
+  padding: 28px;
+  color: #6f6f6f;
+}
+.ws-preview-heading h3 {
+  margin: 0;
+  font-size: 22px;
+}
+.ws-product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  padding: 0 28px 30px;
+}
+.ws-preview-product {
+  min-width: 0;
+  color: #7a7a7a;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+.ws-preview-product--hovered {
+  transform: translateY(-3px);
+}
+.ws-preview-product-image {
+  position: relative;
+  aspect-ratio: 1 / 1.1;
+  margin-bottom: 8px;
+  display: grid;
+  place-items: center;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.ws-preview-product small {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.ws-garment {
+  font-size: 52px;
+  color: rgba(255, 255, 255, 0.55);
+  font-weight: 700;
+}
+
+/* Interactive heart button in preview */
+.ws-preview-heart-btn {
+  position: absolute;
+  /* top/right are set via inline style from settings.iconPositionX/Y */
+  z-index: 2;
+  width: 36px;
+  height: 36px;
+  border: 0;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+.ws-preview-heart-btn:hover {
+  transform: scale(1.15);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+.ws-preview-heart-btn:active {
+  transform: scale(0.92);
+}
+.ws-product-preview {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 40px;
+  padding: 48px;
+}
+.ws-product-image {
+  position: relative;
+  min-height: 430px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.ws-product-copy {
+  padding-top: 30px;
+}
+.ws-product-copy h2 {
+  font-size: 30px;
+  margin: 0 0 4px;
+}
+.ws-preview-atc {
+  width: 100%;
+  margin-top: 16px;
+  padding: 14px;
+  border: 0;
+  border-radius: 4px;
+  background: #111;
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: default;
+}
+.ws-preview-add {
+  width: 100%;
+  margin-top: 10px;
+  padding: 14px;
+  border: 1px solid #222;
+  border-radius: 4px;
+  background: white;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: default;
+  transition:
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+.ws-floating-preview {
+  position: absolute;
+  bottom: 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  padding: 10px 15px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  font-weight: 600;
+  font-size: 13px;
+  transition:
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+.ws-floating-preview--bottom-right {
+  right: 18px;
+}
+.ws-floating-preview--bottom-left {
+  left: 18px;
+}
+.ws-floating-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  transition: background 0.2s ease;
+}
+
+/* ─── Wishlist page preview ─────────────────────────────────── */
+.ws-preview-wishlist-page {
+  padding: 24px 28px;
+}
+.ws-preview-wishlist-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.ws-preview-wishlist-header h2 {
+  margin: 0;
+  font-size: 20px;
+}
+.ws-preview-item-count {
+  font-size: 12px;
+  color: #888;
+}
+.ws-preview-wishlist-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+.ws-preview-wishlist-card {
+  border: 1px solid #ededed;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: box-shadow 0.15s ease;
+}
+.ws-preview-wishlist-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+.ws-preview-wishlist-img {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+.ws-preview-remove-btn {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 24px;
+  height: 24px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.88);
+  font-size: 16px;
+  display: grid;
+  place-items: center;
+  cursor: default;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+}
+.ws-preview-wishlist-info {
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  font-size: 12px;
+  color: #555;
+}
+.ws-preview-wishlist-info strong {
+  font-size: 13px;
+  color: #222;
+}
+.ws-preview-wishlist-actions {
+  display: flex;
+  gap: 6px;
+  margin-top: 6px;
+}
+.ws-preview-mini-atc {
+  flex: 1;
+  padding: 6px 8px;
+  border: 1px solid currentColor;
+  border-radius: 4px;
+  background: transparent;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: default;
+  text-align: center;
+}
+.ws-preview-mini-view {
+  padding: 6px 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  color: #555;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: default;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* ─── Responsive ────────────────────────────────────────────── */
+@media (max-width: 1100px) {
+  .ws-customize-layout {
+    grid-template-columns: 1fr;
+  }
+  .ws-customize-preview {
+    position: static;
+  }
+}
+@media (max-width: 700px) {
+  .ws-product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .ws-store-preview {
+    margin: 10px;
+    min-height: 500px;
+  }
+  .ws-product-preview {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+  .ws-product-image {
+    min-height: 280px;
+  }
+  .ws-progress {
+    min-width: 100px;
+  }
+  .ws-preview-wishlist-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.ws-preview-add {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.ws-color-preview-heart {
+  display: inline-grid;
+  place-items: center;
+}
+
+.ws-plan-features {
+  display: grid;
+  gap: 8px;
+  color: var(--p-color-text-secondary);
+}
+
+.ws-top-product-rank {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border-radius: 10px;
+  background: var(--p-color-bg-surface-secondary);
+  font-weight: 700;
+}
+
+.ws-top-product-placeholder {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  background: var(--p-color-bg-surface-secondary);
+}

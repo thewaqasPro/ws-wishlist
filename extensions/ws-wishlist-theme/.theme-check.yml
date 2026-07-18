@@ -1,0 +1,9 @@
+extends: theme-check:theme-app-extension
+
+# Disable theme app block asset size limits in Shopify Theme Check
+AssetSizeAppBlockJavaScript:
+  enabled: false
+
+AssetSizeAppBlockStylesheet:
+  enabled: false
+
