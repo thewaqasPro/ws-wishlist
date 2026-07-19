@@ -28,7 +28,7 @@
     "update:config": "node _developer/tomlWriter.js",
     "migrate": "node scripts/migrate.js",
     "prisma:generate:offline": "PRISMA_SCHEMA_ENGINE_BINARY=./scripts/prisma-schema-engine-stub.sh prisma generate",
-    "verify": "npm run lint:check && npm run build && npm audit --omit=dev",
+    "verify": "pnpm run lint:check && pnpm run build && pnpm audit",
     "verify:local": "node scripts/verify-release.js && node scripts/test-storefront-state.js && npm run lint:check && npm run build",
     "test:storefront": "node scripts/test-storefront-state.js"
   },

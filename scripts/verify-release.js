@@ -125,12 +125,16 @@ for (const asset of browserAssets) {
   );
 }
 
-const adminHeart = read("components/icons/WishlistHeart.jsx").match(
-  /M20\.84[^"']+/
-)?.[0];
+const adminHeart = read("components/icons/WishlistHeart.jsx")
+  .match(/M21\s+8\.25[^"']+/)?.[0]
+  ?.replace(/\s+/g, "");
+
 const storefrontHeart = read(
   "extensions/ws-wishlist-theme/assets/ws-wishlist-icons.js"
-).match(/M20\.84[^"']+/)?.[0];
+)
+  .match(/M21\s+8\.25[^"']+/)?.[0]
+  ?.replace(/\s+/g, "");
+
 if (!adminHeart || adminHeart !== storefrontHeart) {
   fail("Admin and storefront heart paths differ");
 }
