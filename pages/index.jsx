@@ -90,6 +90,9 @@ function DashboardPage() {
     );
   }
 
+  const shop = router.query.shop;
+  const fullProxyUrl = shop ? `https://${shop}${data.proxyPath}` : data.proxyPath;
+
   return (
     <Page
       title="WS Wishlist"
@@ -197,16 +200,21 @@ function DashboardPage() {
                 WS Wishlist uses a Shopify app proxy, so customer requests stay
                 on the merchant&apos;s storefront domain.
               </Text>
-              <div className="ws-code-path">{data.proxyPath}</div>
+              <div className="ws-code-path">{fullProxyUrl}</div>
               <Text tone="subdued">
                 Use this URL as a menu destination for a dedicated wishlist
                 page. The theme app embed also opens a fast wishlist drawer.
               </Text>
-              <Button
-                onClick={() => navigator.clipboard?.writeText(data.proxyPath)}
-              >
-                Copy wishlist URL
-              </Button>
+              <InlineStack gap="200">
+                <Button
+                  onClick={() => navigator.clipboard?.writeText(fullProxyUrl)}
+                >
+                  Copy wishlist URL
+                </Button>
+                <Button url={fullProxyUrl} external>
+                  Open in new tab
+                </Button>
+              </InlineStack>
             </BlockStack>
           </Card>
         </InlineGrid>

@@ -15,6 +15,7 @@ import {
   Text,
   TextField,
 } from "@shopify/polaris";
+import { useRouter } from "next/router";
 import { useCallback, useEffect, useMemo, useState } from "react";
 
 export async function getServerSideProps(context) {
@@ -41,6 +42,7 @@ const PREVIEW_PAGES = [
 
 export default function CustomizePage() {
   const api = useAuthenticatedFetch();
+  const router = useRouter();
   const [settings, setSettings] = useState(null);
   const [saved, setSaved] = useState(null);
   const [open, setOpen] = useState("icon");
@@ -49,6 +51,11 @@ export default function CustomizePage() {
   const [error, setError] = useState("");
   const [proxyPath, setProxyPath] = useState("/apps/page");
   const [copyLabel, setCopyLabel] = useState("Copy URL");
+
+  const shop = router.query.shop;
+  const fullProxyUrl = useMemo(() => {
+    return shop ? `https://${shop}${proxyPath}` : proxyPath;
+  }, [shop, proxyPath]);
 
   useEffect(() => {
     api("/api/apps/settings")
@@ -89,7 +96,7 @@ export default function CustomizePage() {
   };
 
   const handleCopy = () => {
-    navigator.clipboard?.writeText(proxyPath);
+    navigator.clipboard?.writeText(fullProxyUrl);
     setCopyLabel("Copied!");
     setTimeout(() => setCopyLabel("Copy URL"), 2000);
   };
@@ -398,8 +405,13 @@ export default function CustomizePage() {
             onToggle={() => setOpen(open === "url" ? "" : "url")}
           >
             <BlockStack gap="300">
-              <div className="ws-code-path">{proxyPath}</div>
-              <Button onClick={handleCopy}>{copyLabel}</Button>
+              <div className="ws-code-path">{fullProxyUrl}</div>
+              <InlineStack gap="200">
+                <Button onClick={handleCopy}>{copyLabel}</Button>
+                <Button url={fullProxyUrl} external>
+                  Open in new tab
+                </Button>
+              </InlineStack>
             </BlockStack>
           </SectionCard>
         </div>
