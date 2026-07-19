@@ -9,9 +9,11 @@
     document.querySelector("[data-ws-wishlist-page]");
 
   function inferredProxyPath() {
-    if (configElement?.dataset.proxyPath) {
-      return configElement.dataset.proxyPath;
+    let path = configElement?.dataset.proxyPath;
+    if (path === "/apps/ws-wishlist") {
+      path = "/apps/page";
     }
+    if (path) return path;
     const match = location.pathname.match(/^\/(apps\/[^/]+)/);
     return match ? `/${match[1]}` : "/apps/page";
   }

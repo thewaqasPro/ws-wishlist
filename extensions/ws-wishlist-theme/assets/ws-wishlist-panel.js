@@ -201,7 +201,9 @@
         ${remove}
       </div>
       <div class="ws-wishlist-product-card__content">
-        <div class="ws-wishlist-product-card__title"><a class="ws-wishlist-product-card__title-link" href="${esc(item.productUrl)}">${esc(item.title)}</a></div>
+        <div class="ws-wishlist-product-card__title">
+          <a class="ws-wishlist-product-card__title-link" href="${esc(item.productUrl)}">${esc(item.title)}</a>
+        </div>
         ${state.settings.showPrices && Number(item.price) > 0 ? `<p class="ws-wishlist-product-card__price">${money(item.price, item.currency)}</p>` : ""}
         <div class="ws-wishlist-product-card__actions">
           ${addToCart}
