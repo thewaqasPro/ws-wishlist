@@ -85,7 +85,13 @@
         productId: product.productId || `pending:${handle}`,
         variantId: canonicalVariant || `pending:${handle}`,
         productHandle: handle,
-        title: product.title || "Saved product",
+        title:
+          product.title && product.title !== "Saved product"
+            ? product.title
+            : handle
+                .split("-")
+                .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+                .join(" "),
         variantTitle: product.variantTitle || null,
         productUrl: product.productUrl || `/products/${handle}`,
         imageUrl: product.imageUrl || null,

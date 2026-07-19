@@ -1,1 +1,1168 @@
-{"nodes": [{"id": "users_waqas_development_2026_ws_wishlist_package_json", "label": "package.json", "file_type": "code", "source_file": "package.json", "source_location": "L1"}, {"id": "users_waqas_development_2026_ws_wishlist_package_name", "label": "name", "file_type": "code", "source_file": "package.json", "source_location": "L2"}, {"id": "users_waqas_development_2026_ws_wishlist_package_version", "label": "version", "file_type": "code", "source_file": "package.json", "source_location": "L3"}, {"id": "users_waqas_development_2026_ws_wishlist_package_private", "label": "private", "file_type": "code", "source_file": "package.json", "source_location": "L4"}, {"id": "users_waqas_development_2026_ws_wishlist_package_type", "label": "type", "file_type": "code", "source_file": "package.json", "source_location": "L5"}, {"id": "users_waqas_development_2026_ws_wishlist_package_description", "label": "description", "file_type": "code", "source_file": "package.json", "source_location": "L6"}, {"id": "users_waqas_development_2026_ws_wishlist_package_scripts", "label": "scripts", "file_type": "code", "source_file": "package.json", "source_location": "L7"}, {"id": "users_waqas_development_2026_ws_wishlist_package_scripts_dev", "label": "dev", "file_type": "code", "source_file": "package.json", "source_location": "L8"}, {"id": "users_waqas_development_2026_ws_wishlist_package_scripts_dev_all", "label": "dev:all", "file_type": "code", "source_file": "package.json", "source_location": "L9"}, {"id": "users_waqas_development_2026_ws_wishlist_package_scripts_build", "label": "build", "file_type": "code", "source_file": "package.json", "source_location": "L10"}, {"id": "users_waqas_development_2026_ws_wishlist_package_scripts_start", "label": "start", "file_type": "code", "source_file": "package.json", "source_location": "L11"}, {"id": "users_waqas_development_2026_ws_wishlist_package_scripts_start_docker", "label": "start:docker", "file_type": "code", "source_file": "package.json", "source_location": "L12"}, {"id": "users_waqas_development_2026_ws_wishlist_package_scripts_prettier", "label": "-----> Prettier <-----", "file_type": "code", "source_file": "package.json", "source_location": "L13"}, {"id": "users_waqas_development_2026_ws_wishlist_package_scripts_pretty", "label": "pretty", "file_type": "code", "source_file": "package.json", "source_location": "L14"}, {"id": "users_waqas_development_2026_ws_wishlist_package_scripts_lint_check", "label": "lint:check", "file_type": "code", "source_file": "package.json", "source_location": "L15"}, {"id": "users_waqas_development_2026_ws_wishlist_package_scripts_prisma", "label": "-----> Prisma <-----", "file_type": "code", "source_file": "package.json", "source_location": "L16"}, {"id": "users_waqas_development_2026_ws_wishlist_package_scripts_prisma_generate", "label": "prisma:generate", "file_type": "code", "source_file": "package.json", "source_location": "L18"}, {"id": "users_waqas_development_2026_ws_wishlist_package_scripts_prisma_push", "label": "prisma:push", "file_type": "code", "source_file": "package.json", "source_location": "L19"}, {"id": "users_waqas_development_2026_ws_wishlist_package_scripts_prisma_pull", "label": "prisma:pull", "file_type": "code", "source_file": "package.json", "source_location": "L20"}, {"id": "users_waqas_development_2026_ws_wishlist_package_scripts_reserved_scripts", "label": "-----> Reserved Scripts <-----", "file_type": "code", "source_file": "package.json", "source_location": "L21"}, {"id": "users_waqas_development_2026_ws_wishlist_package_scripts_prepare", "label": "prepare", "file_type": "code", "source_file": "package.json", "source_location": "L22"}, {"id": "users_waqas_development_2026_ws_wishlist_package_scripts_shopify", "label": "-----> Shopify <-----", "file_type": "code", "source_file": "package.json", "source_location": "L23"}, {"id": "users_waqas_development_2026_ws_wishlist_package_scripts_shopify_deploy", "label": "shopify:deploy", "file_type": "code", "source_file": "package.json", "source_location": "L25"}, {"id": "users_waqas_development_2026_ws_wishlist_package_scripts_shopify_config", "label": "shopify:config", "file_type": "code", "source_file": "package.json", "source_location": "L26"}, {"id": "users_waqas_development_2026_ws_wishlist_package_scripts_deploy", "label": "deploy", "file_type": "code", "source_file": "package.json", "source_location": "L27"}, {"id": "users_waqas_development_2026_ws_wishlist_package_scripts_update_config", "label": "update:config", "file_type": "code", "source_file": "package.json", "source_location": "L28"}, {"id": "users_waqas_development_2026_ws_wishlist_package_scripts_migrate", "label": "migrate", "file_type": "code", "source_file": "package.json", "source_location": "L29"}, {"id": "users_waqas_development_2026_ws_wishlist_package_scripts_prisma_generate_offline", "label": "prisma:generate:offline", "file_type": "code", "source_file": "package.json", "source_location": "L30"}, {"id": "users_waqas_development_2026_ws_wishlist_package_scripts_verify", "label": "verify", "file_type": "code", "source_file": "package.json", "source_location": "L31"}, {"id": "users_waqas_development_2026_ws_wishlist_package_scripts_verify_local", "label": "verify:local", "file_type": "code", "source_file": "package.json", "source_location": "L32"}, {"id": "users_waqas_development_2026_ws_wishlist_package_scripts_test_storefront", "label": "test:storefront", "file_type": "code", "source_file": "package.json", "source_location": "L33"}, {"id": "users_waqas_development_2026_ws_wishlist_package_dependencies", "label": "dependencies", "file_type": "code", "source_file": "package.json", "source_location": "L35"}, {"id": "users_waqas_development_2026_ws_wishlist_package_dependencies_prisma_adapter_pg", "label": "@prisma/adapter-pg", "file_type": "code", "source_file": "package.json", "source_location": "L36"}, {"id": "prisma_adapter_pg", "label": "@prisma/adapter-pg", "file_type": "concept", "source_file": "package.json", "source_location": "L36"}, {"id": "users_waqas_development_2026_ws_wishlist_package_dependencies_prisma_client", "label": "@prisma/client", "file_type": "code", "source_file": "package.json", "source_location": "L37"}, {"id": "prisma_client", "label": "@prisma/client", "file_type": "concept", "source_file": "package.json", "source_location": "L37"}, {"id": "users_waqas_development_2026_ws_wishlist_package_dependencies_shopify_polaris", "label": "@shopify/polaris", "file_type": "code", "source_file": "package.json", "source_location": "L38"}, {"id": "shopify_polaris", "label": "@shopify/polaris", "file_type": "concept", "source_file": "package.json", "source_location": "L38"}, {"id": "users_waqas_development_2026_ws_wishlist_package_dependencies_shopify_polaris_icons", "label": "@shopify/polaris-icons", "file_type": "code", "source_file": "package.json", "source_location": "L39"}, {"id": "shopify_polaris_icons", "label": "@shopify/polaris-icons", "file_type": "concept", "source_file": "package.json", "source_location": "L39"}, {"id": "users_waqas_development_2026_ws_wishlist_package_dependencies_shopify_shopify_api", "label": "@shopify/shopify-api", "file_type": "code", "source_file": "package.json", "source_location": "L40"}, {"id": "shopify_shopify_api", "label": "@shopify/shopify-api", "file_type": "concept", "source_file": "package.json", "source_location": "L40"}, {"id": "users_waqas_development_2026_ws_wishlist_package_dependencies_cryptr", "label": "cryptr", "file_type": "code", "source_file": "package.json", "source_location": "L41"}, {"id": "cryptr", "label": "cryptr", "file_type": "concept", "source_file": "package.json", "source_location": "L41"}, {"id": "users_waqas_development_2026_ws_wishlist_package_dependencies_dotenv", "label": "dotenv", "file_type": "code", "source_file": "package.json", "source_location": "L42"}, {"id": "dotenv", "label": "dotenv", "file_type": "concept", "source_file": "package.json", "source_location": "L42"}, {"id": "users_waqas_development_2026_ws_wishlist_package_dependencies_lucide_react", "label": "lucide-react", "file_type": "code", "source_file": "package.json", "source_location": "L43"}, {"id": "lucide_react", "label": "lucide-react", "file_type": "concept", "source_file": "package.json", "source_location": "L43"}, {"id": "users_waqas_development_2026_ws_wishlist_package_dependencies_next", "label": "next", "file_type": "code", "source_file": "package.json", "source_location": "L44"}, {"id": "next", "label": "next", "file_type": "concept", "source_file": "package.json", "source_location": "L44"}, {"id": "users_waqas_development_2026_ws_wishlist_package_dependencies_next_api_middleware", "label": "next-api-middleware", "file_type": "code", "source_file": "package.json", "source_location": "L45"}, {"id": "next_api_middleware", "label": "next-api-middleware", "file_type": "concept", "source_file": "package.json", "source_location": "L45"}, {"id": "users_waqas_development_2026_ws_wishlist_package_dependencies_pg", "label": "pg", "file_type": "code", "source_file": "package.json", "source_location": "L46"}, {"id": "pg", "label": "pg", "file_type": "concept", "source_file": "package.json", "source_location": "L46"}, {"id": "users_waqas_development_2026_ws_wishlist_package_dependencies_react", "label": "react", "file_type": "code", "source_file": "package.json", "source_location": "L47"}, {"id": "react", "label": "react", "file_type": "concept", "source_file": "package.json", "source_location": "L47"}, {"id": "users_waqas_development_2026_ws_wishlist_package_dependencies_react_dom", "label": "react-dom", "file_type": "code", "source_file": "package.json", "source_location": "L48"}, {"id": "react_dom", "label": "react-dom", "file_type": "concept", "source_file": "package.json", "source_location": "L48"}, {"id": "users_waqas_development_2026_ws_wishlist_package_devdependencies", "label": "devDependencies", "file_type": "code", "source_file": "package.json", "source_location": "L50"}, {"id": "users_waqas_development_2026_ws_wishlist_package_devdependencies_iarna_toml", "label": "@iarna/toml", "file_type": "code", "source_file": "package.json", "source_location": "L51"}, {"id": "iarna_toml", "label": "@iarna/toml", "file_type": "concept", "source_file": "package.json", "source_location": "L51"}, {"id": "users_waqas_development_2026_ws_wishlist_package_devdependencies_shopify_cli", "label": "@shopify/cli", "file_type": "code", "source_file": "package.json", "source_location": "L52"}, {"id": "shopify_cli", "label": "@shopify/cli", "file_type": "concept", "source_file": "package.json", "source_location": "L52"}, {"id": "users_waqas_development_2026_ws_wishlist_package_devdependencies_prettier", "label": "prettier", "file_type": "code", "source_file": "package.json", "source_location": "L53"}, {"id": "prettier", "label": "prettier", "file_type": "concept", "source_file": "package.json", "source_location": "L53"}, {"id": "users_waqas_development_2026_ws_wishlist_package_devdependencies_prisma", "label": "prisma", "file_type": "code", "source_file": "package.json", "source_location": "L54"}, {"id": "prisma", "label": "prisma", "file_type": "concept", "source_file": "package.json", "source_location": "L54"}, {"id": "users_waqas_development_2026_ws_wishlist_package_engines", "label": "engines", "file_type": "code", "source_file": "package.json", "source_location": "L56"}, {"id": "users_waqas_development_2026_ws_wishlist_package_engines_node", "label": "node", "file_type": "code", "source_file": "package.json", "source_location": "L57"}, {"id": "users_waqas_development_2026_ws_wishlist_package_overrides", "label": "overrides", "file_type": "code", "source_file": "package.json", "source_location": "L59"}, {"id": "users_waqas_development_2026_ws_wishlist_package_overrides_postcss", "label": "postcss", "file_type": "code", "source_file": "package.json", "source_location": "L60"}], "edges": [{"source": "users_waqas_development_2026_ws_wishlist_package_json", "target": "users_waqas_development_2026_ws_wishlist_package_name", "relation": "contains", "confidence": "EXTRACTED", "source_file": "package.json", "source_location": "L2", "weight": 1.0}, {"source": "users_waqas_development_2026_ws_wishlist_package_json", "target": "users_waqas_development_2026_ws_wishlist_package_version", "relation": "contains", "confidence": "EXTRACTED", "source_file": "package.json", "source_location": "L3", "weight": 1.0}, {"source": "users_waqas_development_2026_ws_wishlist_package_json", "target": "users_waqas_development_2026_ws_wishlist_package_private", "relation": "contains", "confidence": "EXTRACTED", "source_file": "package.json", "source_location": "L4", "weight": 1.0}, {"source": "users_waqas_development_2026_ws_wishlist_package_json", "target": "users_waqas_development_2026_ws_wishlist_package_type", "relation": "contains", "confidence": "EXTRACTED", "source_file": "package.json", "source_location": "L5", "weight": 1.0}, {"source": "users_waqas_development_2026_ws_wishlist_package_json", "target": "users_waqas_development_2026_ws_wishlist_package_description", "relation": "contains", "confidence": "EXTRACTED", "source_file": "package.json", "source_location": "L6", "weight": 1.0}, {"source": "users_waqas_development_2026_ws_wishlist_package_json", "target": "users_waqas_development_2026_ws_wishlist_package_scripts", "relation": "contains", "confidence": "EXTRACTED", "source_file": "package.json", "source_location": "L7", "weight": 1.0}, {"source": "users_waqas_development_2026_ws_wishlist_package_scripts", "target": "users_waqas_development_2026_ws_wishlist_package_scripts_dev", "relation": "contains", "confidence": "EXTRACTED", "source_file": "package.json", "source_location": "L8", "weight": 1.0}, {"source": "users_waqas_development_2026_ws_wishlist_package_scripts", "target": "users_waqas_development_2026_ws_wishlist_package_scripts_dev_all", "relation": "contains", "confidence": "EXTRACTED", "source_file": "package.json", "source_location": "L9", "weight": 1.0}, {"source": "users_waqas_development_2026_ws_wishlist_package_scripts", "target": "users_waqas_development_2026_ws_wishlist_package_scripts_build", "relation": "contains", "confidence": "EXTRACTED", "source_file": "package.json", "source_location": "L10", "weight": 1.0}, {"source": "users_waqas_development_2026_ws_wishlist_package_scripts", "target": "users_waqas_development_2026_ws_wishlist_package_scripts_start", "relation": "contains", "confidence": "EXTRACTED", "source_file": "package.json", "source_location": "L11", "weight": 1.0}, {"source": "users_waqas_development_2026_ws_wishlist_package_scripts", "target": "users_waqas_development_2026_ws_wishlist_package_scripts_start_docker", "relation": "contains", "confidence": "EXTRACTED", "source_file": "package.json", "source_location": "L12", "weight": 1.0}, {"source": "users_waqas_development_2026_ws_wishlist_package_scripts", "target": "users_waqas_development_2026_ws_wishlist_package_scripts_prettier", "relation": "contains", "confidence": "EXTRACTED", "source_file": "package.json", "source_location": "L13", "weight": 1.0}, {"source": "users_waqas_development_2026_ws_wishlist_package_scripts", "target": "users_waqas_development_2026_ws_wishlist_package_scripts_pretty", "relation": "contains", "confidence": "EXTRACTED", "source_file": "package.json", "source_location": "L14", "weight": 1.0}, {"source": "users_waqas_development_2026_ws_wishlist_package_scripts", "target": "users_waqas_development_2026_ws_wishlist_package_scripts_lint_check", "relation": "contains", "confidence": "EXTRACTED", "source_file": "package.json", "source_location": "L15", "weight": 1.0}, {"source": "users_waqas_development_2026_ws_wishlist_package_scripts", "target": "users_waqas_development_2026_ws_wishlist_package_scripts_prisma", "relation": "contains", "confidence": "EXTRACTED", "source_file": "package.json", "source_location": "L16", "weight": 1.0}, {"source": "users_waqas_development_2026_ws_wishlist_package_scripts", "target": "users_waqas_development_2026_ws_wishlist_package_scripts_prisma", "relation": "contains", "confidence": "EXTRACTED", "source_file": "package.json", "source_location": "L17", "weight": 1.0}, {"source": "users_waqas_development_2026_ws_wishlist_package_scripts", "target": "users_waqas_development_2026_ws_wishlist_package_scripts_prisma_generate", "relation": "contains", "confidence": "EXTRACTED", "source_file": "package.json", "source_location": "L18", "weight": 1.0}, {"source": "users_waqas_development_2026_ws_wishlist_package_scripts", "target": "users_waqas_development_2026_ws_wishlist_package_scripts_prisma_push", "relation": "contains", "confidence": "EXTRACTED", "source_file": "package.json", "source_location": "L19", "weight": 1.0}, {"source": "users_waqas_development_2026_ws_wishlist_package_scripts", "target": "users_waqas_development_2026_ws_wishlist_package_scripts_prisma_pull", "relation": "contains", "confidence": "EXTRACTED", "source_file": "package.json", "source_location": "L20", "weight": 1.0}, {"source": "users_waqas_development_2026_ws_wishlist_package_scripts", "target": "users_waqas_development_2026_ws_wishlist_package_scripts_reserved_scripts", "relation": "contains", "confidence": "EXTRACTED", "source_file": "package.json", "source_location": "L21", "weight": 1.0}, {"source": "users_waqas_development_2026_ws_wishlist_package_scripts", "target": "users_waqas_development_2026_ws_wishlist_package_scripts_prepare", "relation": "contains", "confidence": "EXTRACTED", "source_file": "package.json", "source_location": "L22", "weight": 1.0}, {"source": "users_waqas_development_2026_ws_wishlist_package_scripts", "target": "users_waqas_development_2026_ws_wishlist_package_scripts_shopify", "relation": "contains", "confidence": "EXTRACTED", "source_file": "package.json", "source_location": "L23", "weight": 1.0}, {"source": "users_waqas_development_2026_ws_wishlist_package_scripts", "target": "users_waqas_development_2026_ws_wishlist_package_scripts_shopify", "relation": "contains", "confidence": "EXTRACTED", "source_file": "package.json", "source_location": "L24", "weight": 1.0}, {"source": "users_waqas_development_2026_ws_wishlist_package_scripts", "target": "users_waqas_development_2026_ws_wishlist_package_scripts_shopify_deploy", "relation": "contains", "confidence": "EXTRACTED", "source_file": "package.json", "source_location": "L25", "weight": 1.0}, {"source": "users_waqas_development_2026_ws_wishlist_package_scripts", "target": "users_waqas_development_2026_ws_wishlist_package_scripts_shopify_config", "relation": "contains", "confidence": "EXTRACTED", "source_file": "package.json", "source_location": "L26", "weight": 1.0}, {"source": "users_waqas_development_2026_ws_wishlist_package_scripts", "target": "users_waqas_development_2026_ws_wishlist_package_scripts_deploy", "relation": "contains", "confidence": "EXTRACTED", "source_file": "package.json", "source_location": "L27", "weight": 1.0}, {"source": "users_waqas_development_2026_ws_wishlist_package_scripts", "target": "users_waqas_development_2026_ws_wishlist_package_scripts_update_config", "relation": "contains", "confidence": "EXTRACTED", "source_file": "package.json", "source_location": "L28", "weight": 1.0}, {"source": "users_waqas_development_2026_ws_wishlist_package_scripts", "target": "users_waqas_development_2026_ws_wishlist_package_scripts_migrate", "relation": "contains", "confidence": "EXTRACTED", "source_file": "package.json", "source_location": "L29", "weight": 1.0}, {"source": "users_waqas_development_2026_ws_wishlist_package_scripts", "target": "users_waqas_development_2026_ws_wishlist_package_scripts_prisma_generate_offline", "relation": "contains", "confidence": "EXTRACTED", "source_file": "package.json", "source_location": "L30", "weight": 1.0}, {"source": "users_waqas_development_2026_ws_wishlist_package_scripts", "target": "users_waqas_development_2026_ws_wishlist_package_scripts_verify", "relation": "contains", "confidence": "EXTRACTED", "source_file": "package.json", "source_location": "L31", "weight": 1.0}, {"source": "users_waqas_development_2026_ws_wishlist_package_scripts", "target": "users_waqas_development_2026_ws_wishlist_package_scripts_verify_local", "relation": "contains", "confidence": "EXTRACTED", "source_file": "package.json", "source_location": "L32", "weight": 1.0}, {"source": "users_waqas_development_2026_ws_wishlist_package_scripts", "target": "users_waqas_development_2026_ws_wishlist_package_scripts_test_storefront", "relation": "contains", "confidence": "EXTRACTED", "source_file": "package.json", "source_location": "L33", "weight": 1.0}, {"source": "users_waqas_development_2026_ws_wishlist_package_json", "target": "users_waqas_development_2026_ws_wishlist_package_dependencies", "relation": "contains", "confidence": "EXTRACTED", "source_file": "package.json", "source_location": "L35", "weight": 1.0}, {"source": "users_waqas_development_2026_ws_wishlist_package_dependencies", "target": "users_waqas_development_2026_ws_wishlist_package_dependencies_prisma_adapter_pg", "relation": "contains", "confidence": "EXTRACTED", "source_file": "package.json", "source_location": "L36", "weight": 1.0}, {"source": "users_waqas_development_2026_ws_wishlist_package_dependencies_prisma_adapter_pg", "target": "prisma_adapter_pg", "relation": "imports", "confidence": "EXTRACTED", "source_file": "package.json", "source_location": "L36", "weight": 1.0, "context": "import"}, {"source": "users_waqas_development_2026_ws_wishlist_package_dependencies", "target": "users_waqas_development_2026_ws_wishlist_package_dependencies_prisma_client", "relation": "contains", "confidence": "EXTRACTED", "source_file": "package.json", "source_location": "L37", "weight": 1.0}, {"source": "users_waqas_development_2026_ws_wishlist_package_dependencies_prisma_client", "target": "prisma_client", "relation": "imports", "confidence": "EXTRACTED", "source_file": "package.json", "source_location": "L37", "weight": 1.0, "context": "import"}, {"source": "users_waqas_development_2026_ws_wishlist_package_dependencies", "target": "users_waqas_development_2026_ws_wishlist_package_dependencies_shopify_polaris", "relation": "contains", "confidence": "EXTRACTED", "source_file": "package.json", "source_location": "L38", "weight": 1.0}, {"source": "users_waqas_development_2026_ws_wishlist_package_dependencies_shopify_polaris", "target": "shopify_polaris", "relation": "imports", "confidence": "EXTRACTED", "source_file": "package.json", "source_location": "L38", "weight": 1.0, "context": "import"}, {"source": "users_waqas_development_2026_ws_wishlist_package_dependencies", "target": "users_waqas_development_2026_ws_wishlist_package_dependencies_shopify_polaris_icons", "relation": "contains", "confidence": "EXTRACTED", "source_file": "package.json", "source_location": "L39", "weight": 1.0}, {"source": "users_waqas_development_2026_ws_wishlist_package_dependencies_shopify_polaris_icons", "target": "shopify_polaris_icons", "relation": "imports", "confidence": "EXTRACTED", "source_file": "package.json", "source_location": "L39", "weight": 1.0, "context": "import"}, {"source": "users_waqas_development_2026_ws_wishlist_package_dependencies", "target": "users_waqas_development_2026_ws_wishlist_package_dependencies_shopify_shopify_api", "relation": "contains", "confidence": "EXTRACTED", "source_file": "package.json", "source_location": "L40", "weight": 1.0}, {"source": "users_waqas_development_2026_ws_wishlist_package_dependencies_shopify_shopify_api", "target": "shopify_shopify_api", "relation": "imports", "confidence": "EXTRACTED", "source_file": "package.json", "source_location": "L40", "weight": 1.0, "context": "import"}, {"source": "users_waqas_development_2026_ws_wishlist_package_dependencies", "target": "users_waqas_development_2026_ws_wishlist_package_dependencies_cryptr", "relation": "contains", "confidence": "EXTRACTED", "source_file": "package.json", "source_location": "L41", "weight": 1.0}, {"source": "users_waqas_development_2026_ws_wishlist_package_dependencies_cryptr", "target": "cryptr", "relation": "imports", "confidence": "EXTRACTED", "source_file": "package.json", "source_location": "L41", "weight": 1.0, "context": "import"}, {"source": "users_waqas_development_2026_ws_wishlist_package_dependencies", "target": "users_waqas_development_2026_ws_wishlist_package_dependencies_dotenv", "relation": "contains", "confidence": "EXTRACTED", "source_file": "package.json", "source_location": "L42", "weight": 1.0}, {"source": "users_waqas_development_2026_ws_wishlist_package_dependencies_dotenv", "target": "dotenv", "relation": "imports", "confidence": "EXTRACTED", "source_file": "package.json", "source_location": "L42", "weight": 1.0, "context": "import"}, {"source": "users_waqas_development_2026_ws_wishlist_package_dependencies", "target": "users_waqas_development_2026_ws_wishlist_package_dependencies_lucide_react", "relation": "contains", "confidence": "EXTRACTED", "source_file": "package.json", "source_location": "L43", "weight": 1.0}, {"source": "users_waqas_development_2026_ws_wishlist_package_dependencies_lucide_react", "target": "lucide_react", "relation": "imports", "confidence": "EXTRACTED", "source_file": "package.json", "source_location": "L43", "weight": 1.0, "context": "import"}, {"source": "users_waqas_development_2026_ws_wishlist_package_dependencies", "target": "users_waqas_development_2026_ws_wishlist_package_dependencies_next", "relation": "contains", "confidence": "EXTRACTED", "source_file": "package.json", "source_location": "L44", "weight": 1.0}, {"source": "users_waqas_development_2026_ws_wishlist_package_dependencies_next", "target": "next", "relation": "imports", "confidence": "EXTRACTED", "source_file": "package.json", "source_location": "L44", "weight": 1.0, "context": "import"}, {"source": "users_waqas_development_2026_ws_wishlist_package_dependencies", "target": "users_waqas_development_2026_ws_wishlist_package_dependencies_next_api_middleware", "relation": "contains", "confidence": "EXTRACTED", "source_file": "package.json", "source_location": "L45", "weight": 1.0}, {"source": "users_waqas_development_2026_ws_wishlist_package_dependencies_next_api_middleware", "target": "next_api_middleware", "relation": "imports", "confidence": "EXTRACTED", "source_file": "package.json", "source_location": "L45", "weight": 1.0, "context": "import"}, {"source": "users_waqas_development_2026_ws_wishlist_package_dependencies", "target": "users_waqas_development_2026_ws_wishlist_package_dependencies_pg", "relation": "contains", "confidence": "EXTRACTED", "source_file": "package.json", "source_location": "L46", "weight": 1.0}, {"source": "users_waqas_development_2026_ws_wishlist_package_dependencies_pg", "target": "pg", "relation": "imports", "confidence": "EXTRACTED", "source_file": "package.json", "source_location": "L46", "weight": 1.0, "context": "import"}, {"source": "users_waqas_development_2026_ws_wishlist_package_dependencies", "target": "users_waqas_development_2026_ws_wishlist_package_dependencies_react", "relation": "contains", "confidence": "EXTRACTED", "source_file": "package.json", "source_location": "L47", "weight": 1.0}, {"source": "users_waqas_development_2026_ws_wishlist_package_dependencies_react", "target": "react", "relation": "imports", "confidence": "EXTRACTED", "source_file": "package.json", "source_location": "L47", "weight": 1.0, "context": "import"}, {"source": "users_waqas_development_2026_ws_wishlist_package_dependencies", "target": "users_waqas_development_2026_ws_wishlist_package_dependencies_react_dom", "relation": "contains", "confidence": "EXTRACTED", "source_file": "package.json", "source_location": "L48", "weight": 1.0}, {"source": "users_waqas_development_2026_ws_wishlist_package_dependencies_react_dom", "target": "react_dom", "relation": "imports", "confidence": "EXTRACTED", "source_file": "package.json", "source_location": "L48", "weight": 1.0, "context": "import"}, {"source": "users_waqas_development_2026_ws_wishlist_package_json", "target": "users_waqas_development_2026_ws_wishlist_package_devdependencies", "relation": "contains", "confidence": "EXTRACTED", "source_file": "package.json", "source_location": "L50", "weight": 1.0}, {"source": "users_waqas_development_2026_ws_wishlist_package_devdependencies", "target": "users_waqas_development_2026_ws_wishlist_package_devdependencies_iarna_toml", "relation": "contains", "confidence": "EXTRACTED", "source_file": "package.json", "source_location": "L51", "weight": 1.0}, {"source": "users_waqas_development_2026_ws_wishlist_package_devdependencies_iarna_toml", "target": "iarna_toml", "relation": "imports", "confidence": "EXTRACTED", "source_file": "package.json", "source_location": "L51", "weight": 1.0, "context": "import"}, {"source": "users_waqas_development_2026_ws_wishlist_package_devdependencies", "target": "users_waqas_development_2026_ws_wishlist_package_devdependencies_shopify_cli", "relation": "contains", "confidence": "EXTRACTED", "source_file": "package.json", "source_location": "L52", "weight": 1.0}, {"source": "users_waqas_development_2026_ws_wishlist_package_devdependencies_shopify_cli", "target": "shopify_cli", "relation": "imports", "confidence": "EXTRACTED", "source_file": "package.json", "source_location": "L52", "weight": 1.0, "context": "import"}, {"source": "users_waqas_development_2026_ws_wishlist_package_devdependencies", "target": "users_waqas_development_2026_ws_wishlist_package_devdependencies_prettier", "relation": "contains", "confidence": "EXTRACTED", "source_file": "package.json", "source_location": "L53", "weight": 1.0}, {"source": "users_waqas_development_2026_ws_wishlist_package_devdependencies_prettier", "target": "prettier", "relation": "imports", "confidence": "EXTRACTED", "source_file": "package.json", "source_location": "L53", "weight": 1.0, "context": "import"}, {"source": "users_waqas_development_2026_ws_wishlist_package_devdependencies", "target": "users_waqas_development_2026_ws_wishlist_package_devdependencies_prisma", "relation": "contains", "confidence": "EXTRACTED", "source_file": "package.json", "source_location": "L54", "weight": 1.0}, {"source": "users_waqas_development_2026_ws_wishlist_package_devdependencies_prisma", "target": "prisma", "relation": "imports", "confidence": "EXTRACTED", "source_file": "package.json", "source_location": "L54", "weight": 1.0, "context": "import"}, {"source": "users_waqas_development_2026_ws_wishlist_package_json", "target": "users_waqas_development_2026_ws_wishlist_package_engines", "relation": "contains", "confidence": "EXTRACTED", "source_file": "package.json", "source_location": "L56", "weight": 1.0}, {"source": "users_waqas_development_2026_ws_wishlist_package_engines", "target": "users_waqas_development_2026_ws_wishlist_package_engines_node", "relation": "contains", "confidence": "EXTRACTED", "source_file": "package.json", "source_location": "L57", "weight": 1.0}, {"source": "users_waqas_development_2026_ws_wishlist_package_json", "target": "users_waqas_development_2026_ws_wishlist_package_overrides", "relation": "contains", "confidence": "EXTRACTED", "source_file": "package.json", "source_location": "L59", "weight": 1.0}, {"source": "users_waqas_development_2026_ws_wishlist_package_overrides", "target": "users_waqas_development_2026_ws_wishlist_package_overrides_postcss", "relation": "contains", "confidence": "EXTRACTED", "source_file": "package.json", "source_location": "L60", "weight": 1.0}]}
+{
+  "nodes": [
+    {
+      "id": "users_waqas_development_2026_ws_wishlist_package_json",
+      "label": "package.json",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L1"
+    },
+    {
+      "id": "users_waqas_development_2026_ws_wishlist_package_name",
+      "label": "name",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L2"
+    },
+    {
+      "id": "users_waqas_development_2026_ws_wishlist_package_version",
+      "label": "version",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L3"
+    },
+    {
+      "id": "users_waqas_development_2026_ws_wishlist_package_private",
+      "label": "private",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L4"
+    },
+    {
+      "id": "users_waqas_development_2026_ws_wishlist_package_type",
+      "label": "type",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L5"
+    },
+    {
+      "id": "users_waqas_development_2026_ws_wishlist_package_description",
+      "label": "description",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L6"
+    },
+    {
+      "id": "users_waqas_development_2026_ws_wishlist_package_scripts",
+      "label": "scripts",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L7"
+    },
+    {
+      "id": "users_waqas_development_2026_ws_wishlist_package_scripts_dev",
+      "label": "dev",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L8"
+    },
+    {
+      "id": "users_waqas_development_2026_ws_wishlist_package_scripts_dev_all",
+      "label": "dev:all",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L9"
+    },
+    {
+      "id": "users_waqas_development_2026_ws_wishlist_package_scripts_build",
+      "label": "build",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L10"
+    },
+    {
+      "id": "users_waqas_development_2026_ws_wishlist_package_scripts_start",
+      "label": "start",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L11"
+    },
+    {
+      "id": "users_waqas_development_2026_ws_wishlist_package_scripts_start_docker",
+      "label": "start:docker",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L12"
+    },
+    {
+      "id": "users_waqas_development_2026_ws_wishlist_package_scripts_prettier",
+      "label": "-----> Prettier <-----",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L13"
+    },
+    {
+      "id": "users_waqas_development_2026_ws_wishlist_package_scripts_pretty",
+      "label": "pretty",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L14"
+    },
+    {
+      "id": "users_waqas_development_2026_ws_wishlist_package_scripts_lint_check",
+      "label": "lint:check",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L15"
+    },
+    {
+      "id": "users_waqas_development_2026_ws_wishlist_package_scripts_prisma",
+      "label": "-----> Prisma <-----",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L16"
+    },
+    {
+      "id": "users_waqas_development_2026_ws_wishlist_package_scripts_prisma_generate",
+      "label": "prisma:generate",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L18"
+    },
+    {
+      "id": "users_waqas_development_2026_ws_wishlist_package_scripts_prisma_push",
+      "label": "prisma:push",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L19"
+    },
+    {
+      "id": "users_waqas_development_2026_ws_wishlist_package_scripts_prisma_pull",
+      "label": "prisma:pull",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L20"
+    },
+    {
+      "id": "users_waqas_development_2026_ws_wishlist_package_scripts_reserved_scripts",
+      "label": "-----> Reserved Scripts <-----",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L21"
+    },
+    {
+      "id": "users_waqas_development_2026_ws_wishlist_package_scripts_prepare",
+      "label": "prepare",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L22"
+    },
+    {
+      "id": "users_waqas_development_2026_ws_wishlist_package_scripts_shopify",
+      "label": "-----> Shopify <-----",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L23"
+    },
+    {
+      "id": "users_waqas_development_2026_ws_wishlist_package_scripts_shopify_deploy",
+      "label": "shopify:deploy",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L25"
+    },
+    {
+      "id": "users_waqas_development_2026_ws_wishlist_package_scripts_shopify_config",
+      "label": "shopify:config",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L26"
+    },
+    {
+      "id": "users_waqas_development_2026_ws_wishlist_package_scripts_deploy",
+      "label": "deploy",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L27"
+    },
+    {
+      "id": "users_waqas_development_2026_ws_wishlist_package_scripts_update_config",
+      "label": "update:config",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L28"
+    },
+    {
+      "id": "users_waqas_development_2026_ws_wishlist_package_scripts_migrate",
+      "label": "migrate",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L29"
+    },
+    {
+      "id": "users_waqas_development_2026_ws_wishlist_package_scripts_prisma_generate_offline",
+      "label": "prisma:generate:offline",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L30"
+    },
+    {
+      "id": "users_waqas_development_2026_ws_wishlist_package_scripts_verify",
+      "label": "verify",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L31"
+    },
+    {
+      "id": "users_waqas_development_2026_ws_wishlist_package_scripts_verify_local",
+      "label": "verify:local",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L32"
+    },
+    {
+      "id": "users_waqas_development_2026_ws_wishlist_package_scripts_test_storefront",
+      "label": "test:storefront",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L33"
+    },
+    {
+      "id": "users_waqas_development_2026_ws_wishlist_package_dependencies",
+      "label": "dependencies",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L35"
+    },
+    {
+      "id": "users_waqas_development_2026_ws_wishlist_package_dependencies_prisma_adapter_pg",
+      "label": "@prisma/adapter-pg",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L36"
+    },
+    {
+      "id": "prisma_adapter_pg",
+      "label": "@prisma/adapter-pg",
+      "file_type": "concept",
+      "source_file": "package.json",
+      "source_location": "L36"
+    },
+    {
+      "id": "users_waqas_development_2026_ws_wishlist_package_dependencies_prisma_client",
+      "label": "@prisma/client",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L37"
+    },
+    {
+      "id": "prisma_client",
+      "label": "@prisma/client",
+      "file_type": "concept",
+      "source_file": "package.json",
+      "source_location": "L37"
+    },
+    {
+      "id": "users_waqas_development_2026_ws_wishlist_package_dependencies_shopify_polaris",
+      "label": "@shopify/polaris",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L38"
+    },
+    {
+      "id": "shopify_polaris",
+      "label": "@shopify/polaris",
+      "file_type": "concept",
+      "source_file": "package.json",
+      "source_location": "L38"
+    },
+    {
+      "id": "users_waqas_development_2026_ws_wishlist_package_dependencies_shopify_polaris_icons",
+      "label": "@shopify/polaris-icons",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L39"
+    },
+    {
+      "id": "shopify_polaris_icons",
+      "label": "@shopify/polaris-icons",
+      "file_type": "concept",
+      "source_file": "package.json",
+      "source_location": "L39"
+    },
+    {
+      "id": "users_waqas_development_2026_ws_wishlist_package_dependencies_shopify_shopify_api",
+      "label": "@shopify/shopify-api",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L40"
+    },
+    {
+      "id": "shopify_shopify_api",
+      "label": "@shopify/shopify-api",
+      "file_type": "concept",
+      "source_file": "package.json",
+      "source_location": "L40"
+    },
+    {
+      "id": "users_waqas_development_2026_ws_wishlist_package_dependencies_cryptr",
+      "label": "cryptr",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L41"
+    },
+    {
+      "id": "cryptr",
+      "label": "cryptr",
+      "file_type": "concept",
+      "source_file": "package.json",
+      "source_location": "L41"
+    },
+    {
+      "id": "users_waqas_development_2026_ws_wishlist_package_dependencies_dotenv",
+      "label": "dotenv",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L42"
+    },
+    {
+      "id": "dotenv",
+      "label": "dotenv",
+      "file_type": "concept",
+      "source_file": "package.json",
+      "source_location": "L42"
+    },
+    {
+      "id": "users_waqas_development_2026_ws_wishlist_package_dependencies_lucide_react",
+      "label": "lucide-react",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L43"
+    },
+    {
+      "id": "lucide_react",
+      "label": "lucide-react",
+      "file_type": "concept",
+      "source_file": "package.json",
+      "source_location": "L43"
+    },
+    {
+      "id": "users_waqas_development_2026_ws_wishlist_package_dependencies_next",
+      "label": "next",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L44"
+    },
+    {
+      "id": "next",
+      "label": "next",
+      "file_type": "concept",
+      "source_file": "package.json",
+      "source_location": "L44"
+    },
+    {
+      "id": "users_waqas_development_2026_ws_wishlist_package_dependencies_next_api_middleware",
+      "label": "next-api-middleware",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L45"
+    },
+    {
+      "id": "next_api_middleware",
+      "label": "next-api-middleware",
+      "file_type": "concept",
+      "source_file": "package.json",
+      "source_location": "L45"
+    },
+    {
+      "id": "users_waqas_development_2026_ws_wishlist_package_dependencies_pg",
+      "label": "pg",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L46"
+    },
+    {
+      "id": "pg",
+      "label": "pg",
+      "file_type": "concept",
+      "source_file": "package.json",
+      "source_location": "L46"
+    },
+    {
+      "id": "users_waqas_development_2026_ws_wishlist_package_dependencies_react",
+      "label": "react",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L47"
+    },
+    {
+      "id": "react",
+      "label": "react",
+      "file_type": "concept",
+      "source_file": "package.json",
+      "source_location": "L47"
+    },
+    {
+      "id": "users_waqas_development_2026_ws_wishlist_package_dependencies_react_dom",
+      "label": "react-dom",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L48"
+    },
+    {
+      "id": "react_dom",
+      "label": "react-dom",
+      "file_type": "concept",
+      "source_file": "package.json",
+      "source_location": "L48"
+    },
+    {
+      "id": "users_waqas_development_2026_ws_wishlist_package_devdependencies",
+      "label": "devDependencies",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L50"
+    },
+    {
+      "id": "users_waqas_development_2026_ws_wishlist_package_devdependencies_iarna_toml",
+      "label": "@iarna/toml",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L51"
+    },
+    {
+      "id": "iarna_toml",
+      "label": "@iarna/toml",
+      "file_type": "concept",
+      "source_file": "package.json",
+      "source_location": "L51"
+    },
+    {
+      "id": "users_waqas_development_2026_ws_wishlist_package_devdependencies_shopify_cli",
+      "label": "@shopify/cli",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L52"
+    },
+    {
+      "id": "shopify_cli",
+      "label": "@shopify/cli",
+      "file_type": "concept",
+      "source_file": "package.json",
+      "source_location": "L52"
+    },
+    {
+      "id": "users_waqas_development_2026_ws_wishlist_package_devdependencies_prettier",
+      "label": "prettier",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L53"
+    },
+    {
+      "id": "prettier",
+      "label": "prettier",
+      "file_type": "concept",
+      "source_file": "package.json",
+      "source_location": "L53"
+    },
+    {
+      "id": "users_waqas_development_2026_ws_wishlist_package_devdependencies_prisma",
+      "label": "prisma",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L54"
+    },
+    {
+      "id": "prisma",
+      "label": "prisma",
+      "file_type": "concept",
+      "source_file": "package.json",
+      "source_location": "L54"
+    },
+    {
+      "id": "users_waqas_development_2026_ws_wishlist_package_engines",
+      "label": "engines",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L56"
+    },
+    {
+      "id": "users_waqas_development_2026_ws_wishlist_package_engines_node",
+      "label": "node",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L57"
+    },
+    {
+      "id": "users_waqas_development_2026_ws_wishlist_package_overrides",
+      "label": "overrides",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L59"
+    },
+    {
+      "id": "users_waqas_development_2026_ws_wishlist_package_overrides_postcss",
+      "label": "postcss",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L60"
+    }
+  ],
+  "edges": [
+    {
+      "source": "users_waqas_development_2026_ws_wishlist_package_json",
+      "target": "users_waqas_development_2026_ws_wishlist_package_name",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "users_waqas_development_2026_ws_wishlist_package_json",
+      "target": "users_waqas_development_2026_ws_wishlist_package_version",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "users_waqas_development_2026_ws_wishlist_package_json",
+      "target": "users_waqas_development_2026_ws_wishlist_package_private",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "users_waqas_development_2026_ws_wishlist_package_json",
+      "target": "users_waqas_development_2026_ws_wishlist_package_type",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "users_waqas_development_2026_ws_wishlist_package_json",
+      "target": "users_waqas_development_2026_ws_wishlist_package_description",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "users_waqas_development_2026_ws_wishlist_package_json",
+      "target": "users_waqas_development_2026_ws_wishlist_package_scripts",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "users_waqas_development_2026_ws_wishlist_package_scripts",
+      "target": "users_waqas_development_2026_ws_wishlist_package_scripts_dev",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "users_waqas_development_2026_ws_wishlist_package_scripts",
+      "target": "users_waqas_development_2026_ws_wishlist_package_scripts_dev_all",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "users_waqas_development_2026_ws_wishlist_package_scripts",
+      "target": "users_waqas_development_2026_ws_wishlist_package_scripts_build",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "users_waqas_development_2026_ws_wishlist_package_scripts",
+      "target": "users_waqas_development_2026_ws_wishlist_package_scripts_start",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "users_waqas_development_2026_ws_wishlist_package_scripts",
+      "target": "users_waqas_development_2026_ws_wishlist_package_scripts_start_docker",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "users_waqas_development_2026_ws_wishlist_package_scripts",
+      "target": "users_waqas_development_2026_ws_wishlist_package_scripts_prettier",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "users_waqas_development_2026_ws_wishlist_package_scripts",
+      "target": "users_waqas_development_2026_ws_wishlist_package_scripts_pretty",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "users_waqas_development_2026_ws_wishlist_package_scripts",
+      "target": "users_waqas_development_2026_ws_wishlist_package_scripts_lint_check",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "users_waqas_development_2026_ws_wishlist_package_scripts",
+      "target": "users_waqas_development_2026_ws_wishlist_package_scripts_prisma",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "users_waqas_development_2026_ws_wishlist_package_scripts",
+      "target": "users_waqas_development_2026_ws_wishlist_package_scripts_prisma",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "users_waqas_development_2026_ws_wishlist_package_scripts",
+      "target": "users_waqas_development_2026_ws_wishlist_package_scripts_prisma_generate",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "users_waqas_development_2026_ws_wishlist_package_scripts",
+      "target": "users_waqas_development_2026_ws_wishlist_package_scripts_prisma_push",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "users_waqas_development_2026_ws_wishlist_package_scripts",
+      "target": "users_waqas_development_2026_ws_wishlist_package_scripts_prisma_pull",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "users_waqas_development_2026_ws_wishlist_package_scripts",
+      "target": "users_waqas_development_2026_ws_wishlist_package_scripts_reserved_scripts",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "users_waqas_development_2026_ws_wishlist_package_scripts",
+      "target": "users_waqas_development_2026_ws_wishlist_package_scripts_prepare",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "users_waqas_development_2026_ws_wishlist_package_scripts",
+      "target": "users_waqas_development_2026_ws_wishlist_package_scripts_shopify",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "users_waqas_development_2026_ws_wishlist_package_scripts",
+      "target": "users_waqas_development_2026_ws_wishlist_package_scripts_shopify",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L24",
+      "weight": 1.0
+    },
+    {
+      "source": "users_waqas_development_2026_ws_wishlist_package_scripts",
+      "target": "users_waqas_development_2026_ws_wishlist_package_scripts_shopify_deploy",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "users_waqas_development_2026_ws_wishlist_package_scripts",
+      "target": "users_waqas_development_2026_ws_wishlist_package_scripts_shopify_config",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "users_waqas_development_2026_ws_wishlist_package_scripts",
+      "target": "users_waqas_development_2026_ws_wishlist_package_scripts_deploy",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L27",
+      "weight": 1.0
+    },
+    {
+      "source": "users_waqas_development_2026_ws_wishlist_package_scripts",
+      "target": "users_waqas_development_2026_ws_wishlist_package_scripts_update_config",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L28",
+      "weight": 1.0
+    },
+    {
+      "source": "users_waqas_development_2026_ws_wishlist_package_scripts",
+      "target": "users_waqas_development_2026_ws_wishlist_package_scripts_migrate",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L29",
+      "weight": 1.0
+    },
+    {
+      "source": "users_waqas_development_2026_ws_wishlist_package_scripts",
+      "target": "users_waqas_development_2026_ws_wishlist_package_scripts_prisma_generate_offline",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L30",
+      "weight": 1.0
+    },
+    {
+      "source": "users_waqas_development_2026_ws_wishlist_package_scripts",
+      "target": "users_waqas_development_2026_ws_wishlist_package_scripts_verify",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L31",
+      "weight": 1.0
+    },
+    {
+      "source": "users_waqas_development_2026_ws_wishlist_package_scripts",
+      "target": "users_waqas_development_2026_ws_wishlist_package_scripts_verify_local",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L32",
+      "weight": 1.0
+    },
+    {
+      "source": "users_waqas_development_2026_ws_wishlist_package_scripts",
+      "target": "users_waqas_development_2026_ws_wishlist_package_scripts_test_storefront",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L33",
+      "weight": 1.0
+    },
+    {
+      "source": "users_waqas_development_2026_ws_wishlist_package_json",
+      "target": "users_waqas_development_2026_ws_wishlist_package_dependencies",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L35",
+      "weight": 1.0
+    },
+    {
+      "source": "users_waqas_development_2026_ws_wishlist_package_dependencies",
+      "target": "users_waqas_development_2026_ws_wishlist_package_dependencies_prisma_adapter_pg",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L36",
+      "weight": 1.0
+    },
+    {
+      "source": "users_waqas_development_2026_ws_wishlist_package_dependencies_prisma_adapter_pg",
+      "target": "prisma_adapter_pg",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L36",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "users_waqas_development_2026_ws_wishlist_package_dependencies",
+      "target": "users_waqas_development_2026_ws_wishlist_package_dependencies_prisma_client",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L37",
+      "weight": 1.0
+    },
+    {
+      "source": "users_waqas_development_2026_ws_wishlist_package_dependencies_prisma_client",
+      "target": "prisma_client",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L37",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "users_waqas_development_2026_ws_wishlist_package_dependencies",
+      "target": "users_waqas_development_2026_ws_wishlist_package_dependencies_shopify_polaris",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L38",
+      "weight": 1.0
+    },
+    {
+      "source": "users_waqas_development_2026_ws_wishlist_package_dependencies_shopify_polaris",
+      "target": "shopify_polaris",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L38",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "users_waqas_development_2026_ws_wishlist_package_dependencies",
+      "target": "users_waqas_development_2026_ws_wishlist_package_dependencies_shopify_polaris_icons",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L39",
+      "weight": 1.0
+    },
+    {
+      "source": "users_waqas_development_2026_ws_wishlist_package_dependencies_shopify_polaris_icons",
+      "target": "shopify_polaris_icons",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L39",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "users_waqas_development_2026_ws_wishlist_package_dependencies",
+      "target": "users_waqas_development_2026_ws_wishlist_package_dependencies_shopify_shopify_api",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L40",
+      "weight": 1.0
+    },
+    {
+      "source": "users_waqas_development_2026_ws_wishlist_package_dependencies_shopify_shopify_api",
+      "target": "shopify_shopify_api",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L40",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "users_waqas_development_2026_ws_wishlist_package_dependencies",
+      "target": "users_waqas_development_2026_ws_wishlist_package_dependencies_cryptr",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L41",
+      "weight": 1.0
+    },
+    {
+      "source": "users_waqas_development_2026_ws_wishlist_package_dependencies_cryptr",
+      "target": "cryptr",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L41",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "users_waqas_development_2026_ws_wishlist_package_dependencies",
+      "target": "users_waqas_development_2026_ws_wishlist_package_dependencies_dotenv",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L42",
+      "weight": 1.0
+    },
+    {
+      "source": "users_waqas_development_2026_ws_wishlist_package_dependencies_dotenv",
+      "target": "dotenv",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L42",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "users_waqas_development_2026_ws_wishlist_package_dependencies",
+      "target": "users_waqas_development_2026_ws_wishlist_package_dependencies_lucide_react",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L43",
+      "weight": 1.0
+    },
+    {
+      "source": "users_waqas_development_2026_ws_wishlist_package_dependencies_lucide_react",
+      "target": "lucide_react",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L43",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "users_waqas_development_2026_ws_wishlist_package_dependencies",
+      "target": "users_waqas_development_2026_ws_wishlist_package_dependencies_next",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L44",
+      "weight": 1.0
+    },
+    {
+      "source": "users_waqas_development_2026_ws_wishlist_package_dependencies_next",
+      "target": "next",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L44",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "users_waqas_development_2026_ws_wishlist_package_dependencies",
+      "target": "users_waqas_development_2026_ws_wishlist_package_dependencies_next_api_middleware",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L45",
+      "weight": 1.0
+    },
+    {
+      "source": "users_waqas_development_2026_ws_wishlist_package_dependencies_next_api_middleware",
+      "target": "next_api_middleware",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L45",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "users_waqas_development_2026_ws_wishlist_package_dependencies",
+      "target": "users_waqas_development_2026_ws_wishlist_package_dependencies_pg",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L46",
+      "weight": 1.0
+    },
+    {
+      "source": "users_waqas_development_2026_ws_wishlist_package_dependencies_pg",
+      "target": "pg",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L46",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "users_waqas_development_2026_ws_wishlist_package_dependencies",
+      "target": "users_waqas_development_2026_ws_wishlist_package_dependencies_react",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L47",
+      "weight": 1.0
+    },
+    {
+      "source": "users_waqas_development_2026_ws_wishlist_package_dependencies_react",
+      "target": "react",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L47",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "users_waqas_development_2026_ws_wishlist_package_dependencies",
+      "target": "users_waqas_development_2026_ws_wishlist_package_dependencies_react_dom",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L48",
+      "weight": 1.0
+    },
+    {
+      "source": "users_waqas_development_2026_ws_wishlist_package_dependencies_react_dom",
+      "target": "react_dom",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L48",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "users_waqas_development_2026_ws_wishlist_package_json",
+      "target": "users_waqas_development_2026_ws_wishlist_package_devdependencies",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L50",
+      "weight": 1.0
+    },
+    {
+      "source": "users_waqas_development_2026_ws_wishlist_package_devdependencies",
+      "target": "users_waqas_development_2026_ws_wishlist_package_devdependencies_iarna_toml",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L51",
+      "weight": 1.0
+    },
+    {
+      "source": "users_waqas_development_2026_ws_wishlist_package_devdependencies_iarna_toml",
+      "target": "iarna_toml",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L51",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "users_waqas_development_2026_ws_wishlist_package_devdependencies",
+      "target": "users_waqas_development_2026_ws_wishlist_package_devdependencies_shopify_cli",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L52",
+      "weight": 1.0
+    },
+    {
+      "source": "users_waqas_development_2026_ws_wishlist_package_devdependencies_shopify_cli",
+      "target": "shopify_cli",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L52",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "users_waqas_development_2026_ws_wishlist_package_devdependencies",
+      "target": "users_waqas_development_2026_ws_wishlist_package_devdependencies_prettier",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L53",
+      "weight": 1.0
+    },
+    {
+      "source": "users_waqas_development_2026_ws_wishlist_package_devdependencies_prettier",
+      "target": "prettier",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L53",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "users_waqas_development_2026_ws_wishlist_package_devdependencies",
+      "target": "users_waqas_development_2026_ws_wishlist_package_devdependencies_prisma",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L54",
+      "weight": 1.0
+    },
+    {
+      "source": "users_waqas_development_2026_ws_wishlist_package_devdependencies_prisma",
+      "target": "prisma",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L54",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "users_waqas_development_2026_ws_wishlist_package_json",
+      "target": "users_waqas_development_2026_ws_wishlist_package_engines",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L56",
+      "weight": 1.0
+    },
+    {
+      "source": "users_waqas_development_2026_ws_wishlist_package_engines",
+      "target": "users_waqas_development_2026_ws_wishlist_package_engines_node",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L57",
+      "weight": 1.0
+    },
+    {
+      "source": "users_waqas_development_2026_ws_wishlist_package_json",
+      "target": "users_waqas_development_2026_ws_wishlist_package_overrides",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L59",
+      "weight": 1.0
+    },
+    {
+      "source": "users_waqas_development_2026_ws_wishlist_package_overrides",
+      "target": "users_waqas_development_2026_ws_wishlist_package_overrides_postcss",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L60",
+      "weight": 1.0
+    }
+  ]
+}

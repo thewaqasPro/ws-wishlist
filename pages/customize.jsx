@@ -55,17 +55,25 @@ export default function CustomizePage() {
 
   const finalShop = shop || router.query.shop;
   const fullProxyUrl = useMemo(() => {
-    return finalShop ? `https://${finalShop}${proxyPath}/ws-wishlist` : proxyPath;
+    return finalShop
+      ? `https://${finalShop}${proxyPath}/ws-wishlist`
+      : proxyPath;
   }, [finalShop, proxyPath]);
 
   useEffect(() => {
     api("/api/apps/settings")
-      .then(({ settings: loaded, proxyPath: loadedProxyPath, shop: loadedShop }) => {
-        setSettings(loaded);
-        setSaved(loaded);
-        if (loadedProxyPath) setProxyPath(loadedProxyPath);
-        if (loadedShop) setShop(loadedShop);
-      })
+      .then(
+        ({
+          settings: loaded,
+          proxyPath: loadedProxyPath,
+          shop: loadedShop,
+        }) => {
+          setSettings(loaded);
+          setSaved(loaded);
+          if (loadedProxyPath) setProxyPath(loadedProxyPath);
+          if (loadedShop) setShop(loadedShop);
+        }
+      )
       .catch((err) => setError(err.message));
   }, [api]);
 

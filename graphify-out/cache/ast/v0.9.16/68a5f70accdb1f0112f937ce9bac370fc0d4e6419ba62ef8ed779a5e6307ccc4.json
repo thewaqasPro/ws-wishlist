@@ -1,1 +1,31 @@
-{"nodes": [{"id": "users_waqas_development_2026_ws_wishlist_scripts_prisma_schema_engine_stub_sh", "label": "prisma-schema-engine-stub.sh", "file_type": "code", "source_file": "scripts/prisma-schema-engine-stub.sh", "source_location": "L1", "metadata": {"language": "bash", "kind": "file"}}, {"id": "users_waqas_development_2026_ws_wishlist_scripts_prisma_schema_engine_stub_sh__entry", "label": "prisma-schema-engine-stub.sh script", "file_type": "code", "source_file": "scripts/prisma-schema-engine-stub.sh", "source_location": "L1", "metadata": {"language": "bash", "kind": "bash_entrypoint"}}], "edges": [{"source": "users_waqas_development_2026_ws_wishlist_scripts_prisma_schema_engine_stub_sh", "target": "users_waqas_development_2026_ws_wishlist_scripts_prisma_schema_engine_stub_sh__entry", "relation": "contains", "confidence": "EXTRACTED", "source_file": "scripts/prisma-schema-engine-stub.sh", "source_location": "L1", "weight": 1.0}]}
+{
+  "nodes": [
+    {
+      "id": "users_waqas_development_2026_ws_wishlist_scripts_prisma_schema_engine_stub_sh",
+      "label": "prisma-schema-engine-stub.sh",
+      "file_type": "code",
+      "source_file": "scripts/prisma-schema-engine-stub.sh",
+      "source_location": "L1",
+      "metadata": { "language": "bash", "kind": "file" }
+    },
+    {
+      "id": "users_waqas_development_2026_ws_wishlist_scripts_prisma_schema_engine_stub_sh__entry",
+      "label": "prisma-schema-engine-stub.sh script",
+      "file_type": "code",
+      "source_file": "scripts/prisma-schema-engine-stub.sh",
+      "source_location": "L1",
+      "metadata": { "language": "bash", "kind": "bash_entrypoint" }
+    }
+  ],
+  "edges": [
+    {
+      "source": "users_waqas_development_2026_ws_wishlist_scripts_prisma_schema_engine_stub_sh",
+      "target": "users_waqas_development_2026_ws_wishlist_scripts_prisma_schema_engine_stub_sh__entry",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/prisma-schema-engine-stub.sh",
+      "source_location": "L1",
+      "weight": 1.0
+    }
+  ]
+}

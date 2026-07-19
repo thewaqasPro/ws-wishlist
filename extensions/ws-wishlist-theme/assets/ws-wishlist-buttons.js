@@ -29,6 +29,21 @@
   }
 
   function snapshotFromCard(card, link, handle) {
+    const fallbackTitle = handle
+      .split("-")
+      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(" ");
+
+    const textLinks = Array.from(card.querySelectorAll('a[href*="/products/"]'))
+      .map((a) => a.textContent?.trim())
+      .filter(Boolean);
+    const linkTextFallback = textLinks.find(
+      (text) =>
+        !/wishlist/i.test(text) &&
+        text.toLowerCase() !== "view" &&
+        text.toLowerCase() !== "quick view"
+    );
+
     const title =
       card
         .querySelector(
@@ -37,7 +52,8 @@
         ?.textContent?.trim() ||
       link.getAttribute("aria-label") ||
       link.textContent?.trim() ||
-      "Saved product";
+      linkTextFallback ||
+      fallbackTitle;
     const image = card.querySelector("img");
     return {
       title,
@@ -105,10 +121,16 @@
       button.addEventListener("click", (event) => {
         event.preventDefault();
         event.stopPropagation();
+        const variantInput = card.querySelector(
+          'input[name="id"], select[name="id"], [data-variant-id]'
+        );
+        const variantId = variantInput
+          ? variantInput.value || variantInput.getAttribute("data-variant-id")
+          : null;
         const item = WS.store.byHandle(handle);
         item
           ? WS.store.remove(item)
-          : WS.store.add(handle, null, button._wsSnapshot);
+          : WS.store.add(handle, variantId, button._wsSnapshot);
       });
       media.appendChild(button);
       setButtonState(button, WS.store.byHandle(handle), state);

@@ -82,7 +82,7 @@ Group 2.2 Use Shopify's APIs and platform tools
 
 2.2.4 Use the GraphQL Admin API
 **Description:** As of April 1, 2025 all new public apps must be built exclusively with the [GraphQL Admin API](https://shopify.dev/docs/api/admin-graphql/latest). As of October 1, 2024 the [REST Admin API](https://shopify.dev/docs/api/admin-rest) is considered a legacy API and should no longer be used. For details and migration steps, visit the [migration guide](https://shopify.dev/docs/apps/build/graphql/migrate).
-**Verification guidance:** Search the codebase for Shopify Admin API calls and verify that the app uses GraphQL queries and mutations rather than REST Admin API endpoints. Look for requests to paths such as /admin/api/*/*.json, usage of REST resources or legacy REST clients, and any code that performs admin actions through REST instead of GraphQL. Do not flag REST usage for Theme or Asset API related functionality. Fail if the app relies on REST Admin API for general Shopify admin functionality outside of those exceptions.
+**Verification guidance:** Search the codebase for Shopify Admin API calls and verify that the app uses GraphQL queries and mutations rather than REST Admin API endpoints. Look for requests to paths such as /admin/api/_/_.json, usage of REST resources or legacy REST clients, and any code that performs admin actions through REST instead of GraphQL. Do not flag REST usage for Theme or Asset API related functionality. Fail if the app relies on REST Admin API for general Shopify admin functionality outside of those exceptions.
 
 2.2.6 Don't display promotions or advertisements in admin extensions
 **Description:** Don't use [admin UI blocks, admin actions](https://shopify.dev/docs/apps/design-guidelines/app-structure#admin-ui-extensions), or [admin links](https://shopify.dev/docs/apps/build/admin/admin-links/add-admin-links) to promote your app, promote related apps, or request reviews.
@@ -143,7 +143,7 @@ Group 3.2 Request only necessary access scopes
 Section 5. Category-specific
 
 Group 5.1 Online store
-*Applies if: the codebase contains a `shopify.extension.toml` file with `type = "theme"`*
+_Applies if: the codebase contains a `shopify.extension.toml` file with `type = "theme"`_
 
 5.1.1 Use theme app extensions
 **Description:** If your app modifies the merchant's theme, you need to use [theme app extensions](https://shopify.dev/docs/apps/build/online-store/theme-app-extensions). You or merchants should not make any code changes to the theme.
@@ -158,7 +158,7 @@ Group 5.1 Online store
 **Verification guidance:** Search for code that stores or displays collected customer data. Verify that customer data is either written back to Shopify Admin (via Customer or Metafield APIs) or displayed in an in-app dashboard component. Fail if customer data is collected but only stored externally with no visibility in the Admin or app UI.
 
 Group 5.2 Payment
-*Applies if: a `shopify.extension.toml` file declares `type = "payment"` and a `shopify.app.toml` file includes the `write_payment_gateway` scope.*
+_Applies if: a `shopify.extension.toml` file declares `type = "payment"` and a `shopify.app.toml` file includes the `write_payment_gateway` scope._
 
 5.2.4 Use correct payment API scopes
 **Description:** Payments apps aren't permitted to use any [Shopify APIs](https://shopify.dev/docs/api) other than the Payments Apps API and [mandatory webhooks](https://shopify.dev/docs/apps/webhooks/configuration/mandatory-webhooks).
@@ -193,14 +193,14 @@ Group 5.2 Payment
 **Verification guidance:** Check the payment extension configuration for merchant_label and buyer_label. Verify that the payment method name reflects the payment gateway’s legal business name and does not include marketing text, special characters, or unnecessary spacing. Fail if the configured payment name appears promotional or inconsistent with the legal business name.
 
 Group 5.3 Payment facilitator
-*Opt-in: only evaluate if the user explicitly asks.*
+_Opt-in: only evaluate if the user explicitly asks._
 
 5.3.3 Must be free for merchants
 **Description:** Apps that integrate with an existing payment gateway must be provided to merchants at no extra cost.
 **Verification guidance:** Search for any pricing logic, billing API calls (e.g., appSubscriptionCreate, appPurchaseOneTimeCreate), paywall components, or upgrade prompts in the codebase. Verify there are no paid tiers, usage charges, or in-app purchase flows. Fail if any monetization mechanisms are found.
 
 Group 5.4 Purchase option
-*Applies if: a `shopify.app.toml` file includes `read/write_customer_payment_methods` and `read/write_own_subscription_contracts` (Subscriptions API) or `read/write_payment_mandate` (deferred payment options) scopes.*
+_Applies if: a `shopify.app.toml` file includes `read/write_customer_payment_methods` and `read/write_own_subscription_contracts` (Subscriptions API) or `read/write_payment_mandate` (deferred payment options) scopes._
 
 5.4.2 Use correct subscription API scopes
 **Description:** Only API scopes that are required for your app to function are permitted. If your app requests the `write_customer_payment_methods` or the `write_own_subscription_contracts` scopes you may need to provide evidence that they're truly necessary for your app to function.
@@ -267,7 +267,7 @@ Group 5.4 Purchase option
 **Verification guidance:** Check the purchase options extension or selling plan management flow and verify that merchants can assign purchase options at the product variant level, not only at the product level. Look for variant-level selection on the product or product variant page, or code that associates selling plans to specific variants. Fail if the app only supports product-level assignment
 
 Group 5.5 Product sourcing
-*Opt-in: only evaluate if the user explicitly asks.*
+_Opt-in: only evaluate if the user explicitly asks._
 
 5.5.1 Enable merchants to request fulfillment
 **Description:** Use the `fulfillmentOrderSubmitFulfillmentRequest` mutation to allow merchants to request fulfillment from the dropshipping app when an order is created. Refer to [this document](https://shopify.dev/docs/api/admin-graphql/latest/mutations/fulfillmentOrderSubmitFulfillmentRequest?example=Sends+a+fulfillment+request) for additional details.
@@ -282,7 +282,7 @@ Group 5.5 Product sourcing
 **Verification guidance:** Review order fulfillment logic and verify that orders with a payment status of pending or unpaid are not automatically marked as fulfilled. Check for conditionals gating fulfillment requests on payment completion.
 
 Group 5.6 Checkout customization
-*Applies if: a `shopify.extension.toml` file declares `type = "ui-extension"` with clear references to checkout targets (e.g. `target = purchase.checkout.block.render`, or files like `/src/Checkout.*`).*
+_Applies if: a `shopify.extension.toml` file declares `type = "ui-extension"` with clear references to checkout targets (e.g. `target = purchase.checkout.block.render`, or files like `/src/Checkout.*`)._
 
 5.6.2 Give merchants full control over promotional content
 **Description:** Don't use checkout extensions to promote your app, promote related apps, or request reviews.
@@ -309,7 +309,7 @@ Group 5.6 Checkout customization
 **Verification guidance:** Inspect checkout extension code for any UI fields, forms, or prompts that request customer payment information (e.g., credit card numbers, payment details). The extension must not collect payment data directly.
 
 Group 5.7 Sales channel
-*Applies if: a `shopify.extension.toml` file declares `type = "channel_config"`.*
+_Applies if: a `shopify.extension.toml` file declares `type = "channel_config"`._
 
 5.7.2 Build with Polaris components and style guide
 **Description:** Use the required [Polaris components](https://polaris.shopify.com/getting-started) and style guide to build your sales channel. Review how to [build a sales channel](https://shopify.dev/docs/apps/selling-strategies/channels/getting-started).
@@ -368,7 +368,7 @@ Group 5.7 Sales channel
 **Verification guidance:** Flag if the Sales Channel has qualifying steps not communicated in the Account Connection form. Check that any eligibility requirements or onboarding steps are clearly presented during account connection.
 
 Group 5.8 Post purchase
-*Applies if: a `shopify.extension.toml` file declares `type = "checkout_post_purchase"`.*
+_Applies if: a `shopify.extension.toml` file declares `type = "checkout_post_purchase"`._
 
 5.8.1 Add the `write_checkout_extensions_apis` scope
 **Description:** The write_checkout_extensions_apis scope has been granted for your app. Familiarize yourself with the [Shopify API License and Terms of Use](https://www.shopify.com/legal/api-terms) to ensure your app remains compliant.
@@ -411,7 +411,7 @@ Group 5.8 Post purchase
 **Verification guidance:** Check the post-purchase extension for any redirects or links to order tracking functionality. The post-purchase page should not include order tracking features.
 
 Group 5.9 Mobile app builders
-*Opt-in: only evaluate if the user explicitly asks.*
+_Opt-in: only evaluate if the user explicitly asks._
 
 5.9.2 Include submission info for the Apple App Store and Google Play
 **Description:** Include information about either the Apple App Store or the Google Play store app submission process. Inform the merchant about their wait times and app requirements to comply with our mobile app builder requirements.
@@ -422,7 +422,7 @@ Group 5.9 Mobile app builders
 **Verification guidance:** Check the app's UI for a theme builder or theme customization interface that allows merchants to customize or select preset themes for the mobile app being built.
 
 Group 5.10 Donation
-*Opt-in: only evaluate if the user explicitly asks.*
+_Opt-in: only evaluate if the user explicitly asks._
 
 5.10.1 Give instruction on how to hide add-to-cart on donation products
 **Description:** App must include [instructions on how to hide the add-to-cart button](https://help.shopify.com/en/manual/online-store/themes/customizing-themes/hide-add-to-cart-buttons) for any donation product that is created.

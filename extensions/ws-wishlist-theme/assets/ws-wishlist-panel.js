@@ -70,6 +70,20 @@
 
   function ensureDrawer(state) {
     if (document.querySelector(".ws-wishlist-drawer")) return;
+
+    let viewAllUrl = WS.config.proxyPath || "/apps/page/ws-wishlist";
+    if (viewAllUrl === "/apps/page") {
+      viewAllUrl = "/apps/page/ws-wishlist";
+    } else if (
+      viewAllUrl.startsWith("/apps/") &&
+      !viewAllUrl.startsWith("/apps/page/")
+    ) {
+      const suffix = viewAllUrl.substring(6);
+      viewAllUrl = `/apps/page/${suffix}`;
+    } else if (!viewAllUrl.endsWith("/ws-wishlist")) {
+      viewAllUrl = `${viewAllUrl}/ws-wishlist`;
+    }
+
     document.body.insertAdjacentHTML(
       "beforeend",
       `<div class="ws-wishlist-overlay" aria-hidden="true"></div>
@@ -83,7 +97,7 @@
          </header>
          <div class="ws-wishlist-drawer-body"></div>
          <footer class="ws-wishlist-drawer-footer" hidden>
-           <a href="${esc(WS.config.proxyPath)}" class="ws-wishlist-view-all">View all saved items</a>
+           <a href="${esc(viewAllUrl)}" class="ws-wishlist-view-all">View all saved items</a>
          </footer>
        </aside>`
     );
@@ -323,8 +337,12 @@
     toolbar.innerHTML = `<div class="ws-wishlist-share-toolbar">
       <span class="ws-wishlist-share-label">Share</span>
       <div class="ws-wishlist-share-actions">
-        <button type="button" class="ws-wishlist-share-action" data-ws-copy-link="${esc(shareUrl)}" aria-label="Copy share link">Copy link</button>
-        <button type="button" class="ws-wishlist-share-action" data-ws-share-email="${esc(shareUrl)}" aria-label="Share by email">Email</button>
+        <button type="button" class="ws-wishlist-share-action" data-ws-copy-link="${esc(shareUrl)}" aria-label="Copy share link">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+        </button>
+        <button type="button" class="ws-wishlist-share-action" data-ws-share-email="${esc(shareUrl)}" aria-label="Share by email">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+        </button>
       </div>
     </div>
     ${available ? `<button type="button" class="ws-wishlist-add-all-btn" data-ws-add-all>Add all to cart (${available})</button>` : ""}`;

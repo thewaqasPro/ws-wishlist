@@ -18,7 +18,7 @@ scopes = "read_products,write_app_proxy,unauthenticated_read_product_listings"
 use_legacy_install_flow = false
 
 [webhooks]
-api_version = "2026-04"
+api_version = "2026-07"
 
   [[webhooks.subscriptions]]
   topics = [ "app/uninstalled" ]
