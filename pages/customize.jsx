@@ -50,19 +50,21 @@ export default function CustomizePage() {
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState("");
   const [proxyPath, setProxyPath] = useState("/apps/page");
+  const [shop, setShop] = useState("");
   const [copyLabel, setCopyLabel] = useState("Copy URL");
 
-  const shop = router.query.shop;
+  const finalShop = shop || router.query.shop;
   const fullProxyUrl = useMemo(() => {
-    return shop ? `https://${shop}${proxyPath}` : proxyPath;
-  }, [shop, proxyPath]);
+    return finalShop ? `https://${finalShop}${proxyPath}` : proxyPath;
+  }, [finalShop, proxyPath]);
 
   useEffect(() => {
     api("/api/apps/settings")
-      .then(({ settings: loaded, proxyPath: loadedProxyPath }) => {
+      .then(({ settings: loaded, proxyPath: loadedProxyPath, shop: loadedShop }) => {
         setSettings(loaded);
         setSaved(loaded);
         if (loadedProxyPath) setProxyPath(loadedProxyPath);
+        if (loadedShop) setShop(loadedShop);
       })
       .catch((err) => setError(err.message));
   }, [api]);

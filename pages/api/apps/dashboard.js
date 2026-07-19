@@ -78,6 +78,7 @@ async function handler(req, res) {
     }
 
     return res.status(200).json({
+      shop,
       period: "last_30_days",
       currency: currencyItem?.currency || "USD",
       stats: {

@@ -90,7 +90,7 @@ function DashboardPage() {
     );
   }
 
-  const shop = router.query.shop;
+  const shop = data.shop || router.query.shop;
   const fullProxyUrl = shop ? `https://${shop}${data.proxyPath}` : data.proxyPath;
 
   return (

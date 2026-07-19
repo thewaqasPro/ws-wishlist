@@ -10,6 +10,7 @@ async function handler(req, res) {
     if (req.method === "GET") {
       const settings = await getSettings(req.user_shop);
       return res.status(200).json({
+        shop: req.user_shop,
         settings: toAdminSettings(settings),
         proxyPath: `/${process.env.APP_PROXY_PREFIX || "apps"}/${process.env.APP_PROXY_SUBPATH || "page"}`,
       });
@@ -17,6 +18,7 @@ async function handler(req, res) {
     if (req.method === "PUT" || req.method === "PATCH") {
       const settings = await updateSettings(req.user_shop, req.body || {});
       return res.status(200).json({
+        shop: req.user_shop,
         settings: toAdminSettings(settings),
         proxyPath: `/${process.env.APP_PROXY_PREFIX || "apps"}/${process.env.APP_PROXY_SUBPATH || "page"}`,
       });
