@@ -91,7 +91,7 @@ function DashboardPage() {
   }
 
   const shop = data.shop || router.query.shop;
-  const fullProxyUrl = shop ? `https://${shop}${data.proxyPath}` : data.proxyPath;
+  const fullProxyUrl = shop ? `https://${shop}${data.proxyPath}/ws-wishlist` : data.proxyPath;
 
   return (
     <Page

@@ -55,7 +55,7 @@ export default function CustomizePage() {
 
   const finalShop = shop || router.query.shop;
   const fullProxyUrl = useMemo(() => {
-    return finalShop ? `https://${finalShop}${proxyPath}` : proxyPath;
+    return finalShop ? `https://${finalShop}${proxyPath}/ws-wishlist` : proxyPath;
   }, [finalShop, proxyPath]);
 
   useEffect(() => {
